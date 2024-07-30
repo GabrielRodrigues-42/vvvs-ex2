@@ -1,4 +1,5 @@
 package br.vvs.gabrielEx2;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,8 +22,15 @@ class ticketmanTest {
 
     @Test
     void criarShow() {
+        Calendar dataShow1 = new GregorianCalendar();
+        dataShow1.set(2024, 8, 22);
+        String art1 = "Chappell Roan";
+        int cache1 = 1000;
+        int despesas1 = 1000;
         Ticketman ticketman = new Ticketman();
-        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        Show show = new Show(dataShow1, art1, cache1, despesas1, false);
+        assertTrue(show.equals(ticketman.criarShow(dataShow1, art1, cache1, despesas1, false)));
+        assertEquals(ticketman.getNumeroDeShows(), 1);
     }
 
 }
