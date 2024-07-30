@@ -62,6 +62,27 @@ class ticketmanTest {
         assertEquals(ticketman.getNumeroDeShows(), 2);
     }
 
+    @Test
+    void addLote() {
+        Calendar dataShow1 = new GregorianCalendar();
+        dataShow1.set(2024, 0, 22);
+        Calendar dataShow2 = new GregorianCalendar();
+        dataShow2.set(2024, 11, 25);
+        String art1 = "Chappell Roan";
+        String art2 = "WILLOW";
+        int cache1 = 1000;
+        int cache2 = 2000;
+        int despesas1 = 1000;
+        int despesas2 = 2000;
+        Ticketman ticketman = new Ticketman();
+        Show show1 = new Show(dataShow1, art1, cache1, despesas1, false);
+        Show show2 = new Show(dataShow2, art2, cache2, despesas2, true);
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
+        Lote lote = new Lote(100, 0);
+        assertTrue(lote.equals(ticketman.getShow("22012024Chappell Roan").addLote(100, 0)));
+    }
+
 
 
 }

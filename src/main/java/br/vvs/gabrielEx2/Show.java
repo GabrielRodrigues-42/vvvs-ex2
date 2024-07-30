@@ -1,5 +1,6 @@
 package br.vvs.gabrielEx2;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class Show {
         String month = String.format("%02d", data.get(Calendar.MONTH) + 1);
         String year = String.format("%04d", data.get(Calendar.YEAR));
         this.id = day + month + year + artista;
+        this.lotes = new ArrayList<>();
         //System.out.println(id);
 
 
