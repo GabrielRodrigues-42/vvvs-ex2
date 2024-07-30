@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Show {
+    private String id;
     private Calendar data;
     private String artista;
     private int cache;
@@ -17,6 +18,8 @@ public class Show {
         this.cache = cache;
         this.despesas = despesas;
         this.especial = especial;
+        this.id = data.get(Calendar.DAY_OF_MONTH) + data.get(Calendar.MONTH) + data.get(Calendar.YEAR) + artista;
+        System.out.println(id);
 
 
     }

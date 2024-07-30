@@ -8,14 +8,13 @@
     <artifactId>vvvs-ex2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <properties>
+        <mavem.compiler.source>17</mavem.compiler.source>
+        <mavem.compiler.target>17</mavem.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
 
 
 </project>

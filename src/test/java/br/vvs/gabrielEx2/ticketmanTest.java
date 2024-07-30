@@ -40,4 +40,26 @@ class ticketmanTest {
         assertEquals(ticketman.getNumeroDeShows(), 1);
     }
 
+    @Test
+    void getShowEspecifico() {
+        Calendar dataShow1 = new GregorianCalendar();
+        dataShow1.set(2024, 8, 22);
+        Calendar dataShow2 = new GregorianCalendar();
+        dataShow2.set(2024, 12, 25);
+        String art1 = "Chappell Roan";
+        String art2 = "WILLOW";
+        int cache1 = 1000;
+        int cache2 = 2000;
+        int despesas1 = 1000;
+        int despesas2 = 2000;
+        Ticketman ticketman = new Ticketman();
+        Show show = new Show(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
+        assertTrue(show.equals(ticketman.getShow("2054Chappel Roan")));
+        assertEquals(ticketman.getNumeroDeShows(), 2);
+    }
+
+
+
 }
