@@ -22,7 +22,9 @@ public class Show {
     }
 
     public boolean equals(Show show) {
-        if(show.getData().equals(this.data)) {
+        if(show.getData().equals(this.data) && show.getArtista().equals(this.artista)
+                && show.getCache() == this.cache && show.getDespesas() == this.despesas
+                && show.isEspecial() == this.especial) {
             return true;
         }
         return false;
