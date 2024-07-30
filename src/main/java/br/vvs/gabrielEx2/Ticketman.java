@@ -14,8 +14,8 @@ public class Ticketman {
         numeroDeShows = 0;
     }
 
-    public Show criarShow(Calendar dataShow1, String art1, int cache1, int despesas1, boolean b) {
-        Show show = new Show(dataShow1, art1, cache1, despesas1, b);
+    public Show criarShow(Calendar dataShow1, String art1, int cache1, int despesas1, boolean especial) {
+        Show show = new Show(dataShow1, art1, cache1, despesas1, especial);
         shows.add(show);
         numeroDeShows++;
         return show;
