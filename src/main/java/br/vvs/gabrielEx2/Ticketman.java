@@ -24,4 +24,15 @@ public class Ticketman {
     public int getNumeroDeShows() {
         return numeroDeShows;
     }
+
+    public Show getShow(String id) {
+        Show show = null;
+        for(Show s : shows) {
+            if(s.getID().equals(id)) {
+                show = s;
+                break;
+            }
+        }
+        return show;
+    }
 }

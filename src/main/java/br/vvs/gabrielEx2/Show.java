@@ -18,7 +18,7 @@ public class Show {
         this.cache = cache;
         this.despesas = despesas;
         this.especial = especial;
-        this.id = data.get(Calendar.DAY_OF_MONTH) + data.get(Calendar.MONTH) + data.get(Calendar.YEAR) + artista;
+        this.id = data.get(Calendar.DAY_OF_MONTH) + "" + data.get(Calendar.MONTH) + "" + data.get(Calendar.YEAR) + artista;
         System.out.println(id);
 
 
@@ -48,6 +48,10 @@ public class Show {
 
     public int getDespesas() {
         return despesas;
+    }
+
+    public String getID() {
+        return id;
     }
 
     public boolean isEspecial() {

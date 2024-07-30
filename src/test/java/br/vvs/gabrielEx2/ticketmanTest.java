@@ -53,10 +53,12 @@ class ticketmanTest {
         int despesas1 = 1000;
         int despesas2 = 2000;
         Ticketman ticketman = new Ticketman();
-        Show show = new Show(dataShow1, art1, cache1, despesas1, false);
+        Show show1 = new Show(dataShow1, art1, cache1, despesas1, false);
+        Show show2 = new Show(dataShow2, art2, cache2, despesas2, true);
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
-        assertTrue(show.equals(ticketman.getShow("2054Chappel Roan")));
+        assertTrue(show1.equals(ticketman.getShow("2282024Chappel Roan")));
+        assertTrue(show2.equals(ticketman.getShow("2502025WILLOW")));
         assertEquals(ticketman.getNumeroDeShows(), 2);
     }
 
