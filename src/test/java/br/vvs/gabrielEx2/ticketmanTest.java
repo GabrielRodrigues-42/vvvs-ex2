@@ -15,7 +15,7 @@ class ticketmanTest {
     @Test
     void criarShow() {
         Calendar dataShow1 = new GregorianCalendar();
-        dataShow1.set(2024, 8, 22);
+        dataShow1.set(2024, 0, 22);
         String art1 = "Chappell Roan";
         int cache1 = 1000;
         int despesas1 = 1000;
@@ -30,7 +30,7 @@ class ticketmanTest {
     @Test
     void criarShowDiferente() {
         Calendar dataShow1 = new GregorianCalendar();
-        dataShow1.set(2024, 8, 22);
+        dataShow1.set(2024, 0, 22);
         String art1 = "Chappell Roan";
         int cache1 = 1000;
         int despesas1 = 1000;
@@ -43,9 +43,9 @@ class ticketmanTest {
     @Test
     void getShowEspecifico() {
         Calendar dataShow1 = new GregorianCalendar();
-        dataShow1.set(2024, 8, 22);
+        dataShow1.set(2024, 0, 22);
         Calendar dataShow2 = new GregorianCalendar();
-        dataShow2.set(2024, 12, 25);
+        dataShow2.set(2024, 11, 25);
         String art1 = "Chappell Roan";
         String art2 = "WILLOW";
         int cache1 = 1000;
@@ -57,8 +57,8 @@ class ticketmanTest {
         Show show2 = new Show(dataShow2, art2, cache2, despesas2, true);
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
-        assertTrue(show1.equals(ticketman.getShow("2282024Chappel Roan")));
-        assertTrue(show2.equals(ticketman.getShow("2502025WILLOW")));
+        assertTrue(show1.equals(ticketman.getShow("22012024Chappell Roan")));
+        assertTrue(show2.equals(ticketman.getShow("25122024WILLOW")));
         assertEquals(ticketman.getNumeroDeShows(), 2);
     }
 

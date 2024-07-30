@@ -18,8 +18,11 @@ public class Show {
         this.cache = cache;
         this.despesas = despesas;
         this.especial = especial;
-        this.id = data.get(Calendar.DAY_OF_MONTH) + "" + data.get(Calendar.MONTH) + "" + data.get(Calendar.YEAR) + artista;
-        System.out.println(id);
+        String day = String.format("%02d", data.get(Calendar.DAY_OF_MONTH));
+        String month = String.format("%02d", data.get(Calendar.MONTH) + 1);
+        String year = String.format("%04d", data.get(Calendar.YEAR));
+        this.id = day + month + year + artista;
+        //System.out.println(id);
 
 
     }
@@ -60,5 +63,9 @@ public class Show {
 
     public List<Lote> getLotes() {
         return lotes;
+    }
+
+    public String toString() {
+        return artista + id;
     }
 }

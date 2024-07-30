@@ -26,13 +26,12 @@ public class Ticketman {
     }
 
     public Show getShow(String id) {
-        Show show = null;
-        for(Show s : shows) {
-            if(s.getID().equals(id)) {
-                show = s;
-                break;
+        for(int i = 0; i < shows.size(); i++) {
+            if(shows.get(i).getID().equals(id)) {
+                shows.get(i).toString();
+                return shows.get(i);
             }
         }
-        return show;
+        throw new IllegalArgumentException("Show não existe");
     }
 }
