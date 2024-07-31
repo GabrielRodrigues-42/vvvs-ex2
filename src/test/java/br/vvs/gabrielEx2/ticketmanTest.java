@@ -129,6 +129,20 @@ class TicketmanTest {
     }
 
     @Test
+    void getShowInvalido() {
+        System.out.println("Tentar pegar um Show que não existe");
+        Ticketman ticketman = new Ticketman();
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.getShow(null);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.getShow("NXZero");
+                });
+    }
+
+    @Test
     void addLote() {
         System.out.println("Criar e Adicionar novo Lote a um Show Específico");
         Ticketman ticketman = new Ticketman();
@@ -138,6 +152,8 @@ class TicketmanTest {
         assertFalse(lote2.equals((ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10))));
         assertTrue(lote2.equals(ticketman.criarLote("25122024WILLOW", 20, 10, 70, 25, 10)));
     }
+
+
 
     @Test
     void getLotes() {
