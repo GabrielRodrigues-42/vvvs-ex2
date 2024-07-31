@@ -9,8 +9,5 @@
         <module name="vvvs-ex2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="vvvs-ex2" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

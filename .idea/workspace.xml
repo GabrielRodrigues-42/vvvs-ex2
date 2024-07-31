@@ -14,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,6 +33,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ContaTest.criarConta.executor": "Run",
+    "JUnit.FaturaTest.criarFatura.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -65,7 +67,39 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketmanTest">
+  <component name="RunManager" selected="JUnit.ContaTest.criarConta">
+    <configuration name="ContaTest.criarConta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.contas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.contas" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaTest" />
+      <option name="METHOD_NAME" value="criarConta" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FaturaTest.criarFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.contas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.contas" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.FaturaTest" />
+      <option name="METHOD_NAME" value="criarFatura" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TicketmanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -77,38 +111,6 @@
       <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketmanTest.addLoteInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
-      <option name="METHOD_NAME" value="addLoteInvalido" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketmanTest.addLoteInvalidoNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
-      <option name="METHOD_NAME" value="addLoteInvalidoNegativo" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ContaTest.criarConta" />
+        <item itemvalue="JUnit.FaturaTest.criarFatura" />
         <item itemvalue="JUnit.TicketmanTest" />
         <item itemvalue="JUnit.TicketmanTest.addLoteSemShow" />
         <item itemvalue="JUnit.TicketmanTest.addLoteNulo" />
-        <item itemvalue="JUnit.TicketmanTest.addLoteInvalido" />
-        <item itemvalue="JUnit.TicketmanTest.addLoteInvalidoNegativo" />
       </list>
     </recent_temporary>
   </component>
