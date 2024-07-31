@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -45,6 +46,7 @@ class TicketmanTest {
         this.lote1 = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0);
         this.lote2 = new Lote("25122024WILLOW-0", 20, 10, 70, 25);
         this.lote3 = new Lote("22012024Chappell Roan-0", 30, 10, 60, 15);
+        this.lotes = new ArrayList<>();
         this.lotes.add(lote1);
         this.lotes.add(lote3);
 
@@ -97,7 +99,10 @@ class TicketmanTest {
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
         ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15);
-        assertEquals(lotes, ticketman.getLotes("22012024Chappell Roan"));
+        assertEquals(lotes.size(), ticketman.getLotes("22012024Chappell Roan").size());
+        String loteToString = lote1.toString() + " Ingressos: 100, Vip: 25, Meia: 10" + "\n" +
+                lote2.toString() + " Ingressos: 100, Vip: 30, Meia: 10";
+        assertEquals(ticketman.getLotesString("22012024Chappell Roan"), loteToString);
     }
 
 

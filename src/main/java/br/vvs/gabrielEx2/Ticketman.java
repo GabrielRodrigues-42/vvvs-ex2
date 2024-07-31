@@ -38,4 +38,19 @@ public class Ticketman {
         }
         throw new IllegalArgumentException("Show não existe");
     }
+
+    public List<Lote> getLotes(String showID) {
+        return getShow(showID).getLotes();
+    }
+
+    public String getLotesString(String showID) {
+        List<Lote> lotes = getShow(showID).getLotes();
+        StringBuilder lotesStringBuilder = new StringBuilder();
+
+        for (Lote lote : lotes) {
+            lotesStringBuilder.append(lote.toString()).append("\n");
+        }
+
+        return lotesStringBuilder.toString();
+    }
 }

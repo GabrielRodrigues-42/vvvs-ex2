@@ -71,4 +71,11 @@ public class Lote {
         return desconto;
     }
 
+    public String toString() {
+        String str = id + " Ingressos: " + numeroDeIngressos;
+        String distribuicaoIngressos = ", Vip: " + numeroVip + ", Meia: " + numeroMeia;
+        str = str + distribuicaoIngressos;
+        return str;
+    }
+
 }
