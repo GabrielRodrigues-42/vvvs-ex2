@@ -14,23 +14,42 @@ public class Ticketman {
         numeroDeShows = 0;
     }
 
-    public Show criarShow(Calendar dataShow1, String art1, int cache1, int despesas1, boolean especial) {
-        verificarShowVazio(dataShow1, art1, cache1, despesas1, especial);
-        Show show = new Show(dataShow1, art1, cache1, despesas1, especial);
+    public Show criarShow(Calendar dataShow, String art, int cache, int despesas, boolean especial) {
+        verificarShowNulo(dataShow, art, cache, despesas, especial);
+        verificarShowVazio(dataShow, art, cache, despesas);
+        Show show = new Show(dataShow, art, cache, despesas, especial);
         shows.add(show);
         numeroDeShows++;
         return show;
     }
 
-    public void verificarShowVazio(Calendar dataShow1, String art1, int cache1, int despesas1, boolean especial) {
-        if (art1 == null || art1.trim().isEmpty()) {
+    public void verificarShowVazio(Calendar dataShow, String art, int cache, int despesas) {
+        if (art == null || art.trim().isEmpty()) {
             throw new IllegalArgumentException("O nome do artista não pode estar vazio.");
         }
-        if (cache1 <= 0) {
+        if (cache <= 0) {
             throw new IllegalArgumentException("O cachê deve ser um valor positivo.");
         }
-        if (despesas1 <= 0) {
+        if (despesas <= 0) {
             throw new IllegalArgumentException("As despesas devem ser um valor positivo.");
+        }
+    }
+
+    public void verificarShowNulo(Calendar dataShow, String art, Integer cache, Integer despesas, Boolean especial) {
+        if (dataShow == null) {
+            throw new IllegalArgumentException("A data do show não pode ser nula.");
+        }
+        if (art == null) {
+            throw new IllegalArgumentException("O nome do artista não pode ser nulo.");
+        }
+        if (cache == null) {
+            throw new IllegalArgumentException("O cachê não pode ser nulo.");
+        }
+        if (despesas == null) {
+            throw new IllegalArgumentException("As despesas não podem ser nulas.");
+        }
+        if (especial == null) {
+            throw new IllegalArgumentException("O campo especial não pode ser nulo.");
         }
     }
 
