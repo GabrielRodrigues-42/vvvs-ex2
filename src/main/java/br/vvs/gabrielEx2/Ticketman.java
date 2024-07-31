@@ -57,20 +57,20 @@ public class Ticketman {
         return lotesStringBuilder.toString();
     }
 
-    public Ingresso comprarIngresso(String showID, String lote1ID, String tipo) {
+    public Ingresso comprarIngresso(String showID, String loteID, String tipo) {
         //System.out.println("Comprando Ingresso...");
         if(tipo.equals("VIP")) {
             //System.out.println("VIP");
-            return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.VIP);
+            return getShow(showID).comprarIngresso(loteID, TipoIngresso.VIP);
         }
         if(tipo.equals("MEIA")) {
             //System.out.println("MEIA");
-            return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.MEIA);
+            return getShow(showID).comprarIngresso(loteID, TipoIngresso.MEIA);
 
         }
         if(tipo.equals("NORMAL")) {
             //System.out.println("NORMAL");
-            return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.NORMAL);
+            return getShow(showID).comprarIngresso(loteID, TipoIngresso.NORMAL);
 
         }
         throw new IllegalArgumentException("Ingresso Esgotado");
@@ -81,7 +81,11 @@ public class Ticketman {
     }
 
 
-    public void comprarLote(String show1ID, String lote1ID) {
-        getLote(show1ID, lote1ID).comprarLote();
+    public void comprarLote(String show1ID, String loteID) {
+        getShow(show1ID).comprarLote(loteID);
+    }
+
+    public String gerarRelatorio(String showID) {
+        return getShow(showID).gerarRelatorio();
     }
 }

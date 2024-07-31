@@ -11,6 +11,9 @@ public class Show {
     private int despesas;
     private boolean especial;
     private List<Lote> lotes;
+    private int vendidosVIP;
+    private int vendidosMEIA;
+    private int vendidosNORMAIS;
 
     public Show(Calendar data, String artista, int cache, int despesas, boolean especial) {
         this.data = data;
@@ -23,6 +26,9 @@ public class Show {
         String year = String.format("%04d", data.get(Calendar.YEAR));
         this.id = day + month + year + artista;
         this.lotes = new ArrayList<>();
+        this.vendidosVIP = 0;
+        this.vendidosMEIA = 0;
+        this.vendidosNORMAIS = 0;
         //System.out.println(id);
 
 
@@ -83,5 +89,20 @@ public class Show {
 
     public String toString() {
         return artista + id;
+    }
+
+    public String gerarRelatorio() {
+        return null;
+    }
+
+    public void comprarLote(String loteID) {
+        getLote(loteID).comprarLote();
+        this.vendidosVIP += getLote(loteID).getNumeroVip();
+        this.vendidosMEIA += getLote(loteID).getNumeroMeia();
+        this.vendidosNORMAIS += getLote(loteID).getNumeroNormal();
+    }
+
+    public Ingresso comprarIngresso(String loteID, TipoIngresso tipo) {
+        return getLote(loteID).comprarIngresso(tipo);
     }
 }
