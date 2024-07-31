@@ -59,7 +59,7 @@ class TicketmanTest {
         this.lotes = new ArrayList<>();
         this.lotes.add(lote1);
         this.lotes.add(lote3);
-        this.ingresso1l1 = new Ingresso(0, "VIP", false);
+        this.ingresso1l1 = new Ingresso(0, TipoIngresso.VIP, false);
 
     }
 
