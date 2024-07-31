@@ -1,4 +1,4 @@
-package br.vvs.gabrielEx2;
+package br.vvs.ingressos;
 
 public class Ingresso {
     private String id;

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/Lote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/Lote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/Ticketman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/Ticketman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/TipoIngresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/TipoIngresso.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TicketmanTest.criarShow.executor": "Run",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TicketmanTest.criarShow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
+      <option name="METHOD_NAME" value="criarShow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TicketmanTest.criarShow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
