@@ -100,8 +100,10 @@ class TicketmanTest {
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
         ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15);
         assertEquals(lotes.size(), ticketman.getLotes("22012024Chappell Roan").size());
-        String loteToString = lote1.toString() + " Ingressos: 100, Vip: 25, Meia: 10" + "\n" +
-                lote2.toString() + " Ingressos: 100, Vip: 30, Meia: 10";
+        String loteToString = "22012024Chappell Roan-0 Ingressos: 100, Vip: 25, Meia: 10" + "\n" +
+                "22012024Chappell Roan-1 Ingressos: 100, Vip: 30, Meia: 10" + "\n";
+        System.out.println(loteToString);
+        System.out.println(ticketman.getLotesString("22012024Chappell Roan"));
         assertEquals(ticketman.getLotesString("22012024Chappell Roan"), loteToString);
     }
 
