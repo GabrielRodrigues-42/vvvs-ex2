@@ -73,6 +73,29 @@ class TicketmanTest {
     }
 
     @Test
+    void criarShowInvalido() {
+        System.out.println("Tentar criar um Show Inválido");
+        Ticketman ticketman = new Ticketman();
+        String artistaVazio = "";
+        int cacheInvalido = -1000;
+        int despesasInvalidas = -1000;
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarShow(dataShow1, art1, cacheInvalido, despesas1, false);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarShow(dataShow1, art1, cache1, despesasInvalidas, false);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarShow(dataShow1, artistaVazio, cache1, despesas1, false);
+                });
+
+
+    }
+
+    @Test
     void criarShowDiferente() {
         System.out.println("Criar Show Errado");
         Ticketman ticketman = new Ticketman();
