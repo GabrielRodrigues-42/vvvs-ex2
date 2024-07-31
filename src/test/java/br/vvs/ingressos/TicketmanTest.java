@@ -239,6 +239,16 @@ class TicketmanTest {
     }
 
     @Test
+    void getLotesInexistente() {
+        System.out.println("Pegar lotes de um show sem Lotes");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertEquals(lotes.size(), ticketman.getLotes("22012024Chappell Roan").size());
+        String loteToString = "Show não possuí lotes";
+        assertEquals(ticketman.getLotesString("22012024Chappell Roan"), loteToString);
+    }
+
+    @Test
     void comprarLote() {
         System.out.println("Comprar um Lote");
         Ticketman ticketman = new Ticketman();
