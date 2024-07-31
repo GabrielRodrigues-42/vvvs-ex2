@@ -15,10 +15,23 @@ public class Ticketman {
     }
 
     public Show criarShow(Calendar dataShow1, String art1, int cache1, int despesas1, boolean especial) {
+        verificarShowVazio(dataShow1, art1, cache1, despesas1, especial);
         Show show = new Show(dataShow1, art1, cache1, despesas1, especial);
         shows.add(show);
         numeroDeShows++;
         return show;
+    }
+
+    public void verificarShowVazio(Calendar dataShow1, String art1, int cache1, int despesas1, boolean especial) {
+        if (art1 == null || art1.trim().isEmpty()) {
+            throw new IllegalArgumentException("O nome do artista não pode estar vazio.");
+        }
+        if (cache1 <= 0) {
+            throw new IllegalArgumentException("O cachê deve ser um valor positivo.");
+        }
+        if (despesas1 <= 0) {
+            throw new IllegalArgumentException("As despesas devem ser um valor positivo.");
+        }
     }
 
     public Lote criarLote(String showID, int vip, int meia, int normal, int desconto, int precoIngresso) {
