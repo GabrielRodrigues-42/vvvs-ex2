@@ -96,6 +96,20 @@ class TicketmanTest {
     }
 
     @Test
+    void criarShowNulo() {
+        System.out.println("Tentar criar um Show Nulo");
+        Ticketman ticketman = new Ticketman();
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarShow(null, art1, cache1, despesas1, false);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarShow(dataShow1, null, cache1, despesas1, false);
+                });
+    }
+
+    @Test
     void criarShowDiferente() {
         System.out.println("Criar Show Errado");
         Ticketman ticketman = new Ticketman();
