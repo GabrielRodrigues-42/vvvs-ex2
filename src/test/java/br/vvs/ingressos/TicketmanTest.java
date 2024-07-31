@@ -222,6 +222,26 @@ class TicketmanTest {
     }
 
 
+    @Test
+    void getLote() {
+        System.out.println("Pegar um lote Específico");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
+        ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15, 10);
+        assertTrue(lotes.get(0).equals(ticketman.getLote(show1ID, lote1ID)));
+        assertTrue(lotes.get(1).equals(ticketman.getLote(show1ID, lote3ID)));
+    }
+
+    @Test
+    void getLoteInexistente() {
+        System.out.println("Pegar um lote que não existe");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.getLote(show1ID, lote1ID);
+                });    }
 
     @Test
     void getLotes() {

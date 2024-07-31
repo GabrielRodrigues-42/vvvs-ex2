@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="Mudanças na estruturação do Projeto.">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_11_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_11_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_11_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_11_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_11_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_11_0_RC1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vvvs-ex2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vvvs-ex2.iml" afterDir="false" />
+    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="Teste para pegar lotes de um Show que não tem lotes passando com sucesso.">
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +68,7 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketmanTest.getLotesInexistente">
+  <component name="RunManager" selected="JUnit.TicketmanTest.getLoteInexistente">
     <configuration name="TicketmanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -98,38 +84,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketmanTest.addLoteInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
-      <option name="METHOD_NAME" value="addLoteInvalido" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketmanTest.addLoteNulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
-      <option name="METHOD_NAME" value="addLoteNulo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TicketmanTest.addLoteSemShow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -141,6 +95,38 @@
       <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
       <option name="METHOD_NAME" value="addLoteSemShow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.getLote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
+      <option name="METHOD_NAME" value="getLote" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.getLoteInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
+      <option name="METHOD_NAME" value="getLoteInexistente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicketmanTest.getLoteInexistente" />
+        <item itemvalue="JUnit.TicketmanTest.getLote" />
         <item itemvalue="JUnit.TicketmanTest.getLotesInexistente" />
         <item itemvalue="JUnit.TicketmanTest" />
         <item itemvalue="JUnit.TicketmanTest.addLoteSemShow" />
-        <item itemvalue="JUnit.TicketmanTest.addLoteNulo" />
-        <item itemvalue="JUnit.TicketmanTest.addLoteInvalido" />
       </list>
     </recent_temporary>
   </component>
@@ -400,15 +386,27 @@
       <option name="project" value="LOCAL" />
       <updated>1722463178151</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Teste para pegar lotes de um Show que não tem lotes.">
+      <created>1722466422186</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1722466422186</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Teste para pegar lotes de um Show que não tem lotes passando com sucesso.">
+      <created>1722466621167</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1722466621167</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Teste de Criação de Lote Correto, Surpreendendo todos." />
-    <MESSAGE value="Enxugando o código." />
     <MESSAGE value="Teste de Pegar os Lotes de um Show Específico." />
     <MESSAGE value="Teste Alterado de Pegar os Lotes de um Show Específico" />
     <MESSAGE value="Teste Alterado de Pegar os Lotes de um Show Específico Correto." />
@@ -432,7 +430,9 @@
     <MESSAGE value="Teste para criar um Lote com números inválidos pelos parâmetros do cliente passando com sucesso." />
     <MESSAGE value="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
     <MESSAGE value="Mudanças na estruturação do Projeto." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudanças na estruturação do Projeto." />
+    <MESSAGE value="Teste para pegar lotes de um Show que não tem lotes." />
+    <MESSAGE value="Teste para pegar lotes de um Show que não tem lotes passando com sucesso." />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste para pegar lotes de um Show que não tem lotes passando com sucesso." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vvvs_ex2$TicketmanTest_criarShow.ic" NAME="TicketmanTest.criarShow Coverage Results" MODIFIED="1722458300050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
