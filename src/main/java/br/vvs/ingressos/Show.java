@@ -1,4 +1,4 @@
-package br.vvs.gabrielEx2;
+package br.vvs.ingressos;
 
 import java.util.ArrayList;
 import java.util.Calendar;

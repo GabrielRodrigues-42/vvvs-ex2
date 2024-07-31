@@ -1,4 +1,4 @@
-package br.vvs.gabrielEx2;
+package br.vvs.ingressos;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
