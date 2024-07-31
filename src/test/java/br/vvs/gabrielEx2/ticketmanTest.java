@@ -153,6 +153,38 @@ class TicketmanTest {
         assertTrue(lote2.equals(ticketman.criarLote("25122024WILLOW", 20, 10, 70, 25, 10)));
     }
 
+    @Test
+    void addLoteInvalidoNegativo() {
+        System.out.println("Tentar criar um lote com números negativos para ingressos, desconto e preço");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, -25, 10, 65, 0, 10);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 25, -10, 65, 0, 10);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 25, 10, -65, 0, 10);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 25, 10, 65, -1, 10);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 25, 10, 65, 0, -10);
+                });
+    }
+
+    @Test
+    void addLoteNulo() {
+        System.out.println("Tentar criar um lote com valores nulos");
+    }
+
 
 
     @Test
@@ -179,7 +211,7 @@ class TicketmanTest {
         assertTrue(lote1.equals(ticketman.getLote(show1ID, lote1ID)));
         lote1.comprarLote();
         ticketman.comprarLote(show1ID, lote1ID);
-        assertTrue(lote1.isStatus() == ticketman.getLoteStatus(show1ID, lote1ID));
+        assertEquals(lote1.isStatus(), ticketman.getLoteStatus(show1ID, lote1ID));
     }
 
     /*
