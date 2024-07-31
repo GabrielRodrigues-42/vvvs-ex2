@@ -57,6 +57,7 @@ public class Ticketman {
         return lotesStringBuilder.toString();
     }
 
+    /*
     public Ingresso comprarIngresso(String showID, String loteID, String tipo) {
         //System.out.println("Comprando Ingresso...");
         if(tipo.equals("VIP")) {
@@ -75,6 +76,8 @@ public class Ticketman {
         }
         throw new IllegalArgumentException("Ingresso Esgotado");
     }
+
+     */
 
     public boolean getLoteStatus(String showID, String loteID) {
         return getLote(showID, loteID).isStatus();

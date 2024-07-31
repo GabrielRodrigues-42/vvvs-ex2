@@ -113,6 +113,7 @@ public class Lote {
         return id;
     }
 
+    /*
     public Ingresso comprarIngresso(TipoIngresso tipo) {
         for(int i = 0; i < ingressos.size(); i++) {
             if(ingressos.get(i).getTipo().equals(tipo) && ingressos.get(i).isStatus() == false) {
@@ -122,6 +123,8 @@ public class Lote {
         }
         throw new IllegalArgumentException("Ingresso Esgotado ou Indisponível");
     }
+
+     */
 
     public int getValorTotal() {
         return valorTotal;

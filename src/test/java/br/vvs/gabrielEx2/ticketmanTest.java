@@ -129,6 +129,7 @@ class TicketmanTest {
         assertTrue(lote1.isStatus() == ticketman.getLoteStatus(show1ID, lote1ID));
     }
 
+    /*
     @Test
     void comprarIngresso() {
         System.out.println("Comprar um Ingresso");
@@ -137,6 +138,7 @@ class TicketmanTest {
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
         assertTrue(ingresso1l1.equals(ticketman.comprarIngresso(show1ID, lote1ID, "VIP")));
     }
+     */
 
 
     @Test

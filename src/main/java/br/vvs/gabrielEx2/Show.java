@@ -126,7 +126,10 @@ public class Show {
         }
     }
 
+    /*
     public Ingresso comprarIngresso(String loteID, TipoIngresso tipo) {
         return getLote(loteID).comprarIngresso(tipo);
     }
+
+     */
 }
