@@ -25,8 +25,8 @@ public class Lote {
         this.numeroVip = vip;
         this.numeroMeia = meia;
         this.numeroNormal = normal;
-        this.precoIngresso = precoIngresso*100; //valor multiplicado por 100 para eliminar centavos
-        this.valorTotal = (this.precoIngresso*normal) + (this.precoIngresso*vip*2) + (this.precoIngresso*meia/2);
+        this.precoIngresso = precoIngresso*(100-desconto); //valor multiplicado por 100 para eliminar centavos
+        this.valorTotal = ((this.precoIngresso*normal) + (this.precoIngresso*vip*2) + (this.precoIngresso*meia/2));
         numeroDeIngressos = vip+meia+normal;
         verificarEntradas(vip, meia, normal, desconto, precoIngresso);
         adicionarIngressos();

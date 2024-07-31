@@ -14,16 +14,15 @@ public class Show {
     private int vendidosVIP;
     private int vendidosMEIA;
     private int vendidosNORMAIS;
+    private int vendidosTOTAL;
     private int receita;
     private String statusFinanceiro;
 
     public Show(Calendar data, String artista, int cache, int despesas, boolean especial) {
         this.data = data;
         this.artista = artista;
-        this.cache = cache*100; //valor multiplicado por 100 para eliminar centavos
-        this.despesas = despesas*100; //valor multiplicado por 100 para eliminar centavos
         this.especial = especial;
-        this.receita = 0 - this.cache - this.despesas;
+        gerarReceita(cache, despesas);
         String day = String.format("%02d", data.get(Calendar.DAY_OF_MONTH));
         String month = String.format("%02d", data.get(Calendar.MONTH) + 1);
         String year = String.format("%04d", data.get(Calendar.YEAR));
@@ -32,9 +31,22 @@ public class Show {
         this.vendidosVIP = 0;
         this.vendidosMEIA = 0;
         this.vendidosNORMAIS = 0;
+        this.vendidosTOTAL = 0;
+
         //System.out.println(id);
 
 
+    }
+
+    private void gerarReceita(int cache, int despesas) {
+        this.cache = cache*100; // Valores multiplicados por 100 para eliminar centavos;
+        if(this.especial) {
+            this.despesas = despesas*115;
+        }
+        else {
+            this.despesas = despesas*100;
+        }
+        this.receita = 0 - (this.cache + this.despesas);
     }
 
     public Lote criarLote(int vip, int meia, int normal, int desconto, int precoIngresso) {
@@ -96,13 +108,20 @@ public class Show {
 
     public String gerarRelatorio() {
         checkStatusFinanceiro();
-        String relatorio = this.vendidosVIP + " Ingressos VIP vendidos, " + this.vendidosMEIA +
-                " Ingressos MEIA vendidos, " + this.vendidosNORMAIS +
-                " Ingressos NORMAIS vendidos. \n" +
-                "Receita Líquida: " + this.receita + "; Status Financeiro: " +
-                this.statusFinanceiro;
-        return relatorio;
+        int mes = this.data.get(Calendar.MONTH) + 1;
+        String dataFormatada = data.get(Calendar.DAY_OF_MONTH) + "/" + mes + "/" + data.get(Calendar.YEAR);
+
+        StringBuilder relatorio = new StringBuilder();
+        relatorio.append("Show de ").append(artista).append(" - ").append(dataFormatada)
+                .append("\n").append(this.vendidosVIP).append(" Ingressos VIP vendidos, ")
+                .append(this.vendidosMEIA).append(" Ingressos MEIA vendidos, ")
+                .append(this.vendidosNORMAIS).append(" Ingressos NORMAIS vendidos. \n")
+                .append("Receita Líquida: ").append(this.receita)
+                .append("; Status Financeiro: ").append(this.statusFinanceiro);
+
+        return relatorio.toString();
     }
+
 
     public void comprarLote(String loteID) {
         getLote(loteID).comprarLote();
@@ -110,6 +129,7 @@ public class Show {
         this.vendidosMEIA += getLote(loteID).getNumeroMeia();
         this.vendidosNORMAIS += getLote(loteID).getNumeroNormal();
         receita += getLote(loteID).getValorTotal();
+        this.vendidosTOTAL += getLote(loteID).getValorTotal();
     }
 
     public void checkStatusFinanceiro() {
