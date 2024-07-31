@@ -4,46 +4,142 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/Lote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/Lote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/Ticketman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/Ticketman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/gabrielEx2/TipoIngresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingressos/main/java/br/vvs/gabrielEx2/TipoIngresso.java" afterDir="false" />
-    </list>
+    <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2jyQK2zqWl8JPDpIVKlNuLBXlE4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.TicketmanTest.criarShow.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/pingu/OneDrive/Documentos/GitHub/vvvs-ex2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="TicketmanTest.criarShow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.vvs.gabrielEx2" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.vvs.gabrielEx2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TicketmanTest">
+    <configuration name="TicketmanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
-      <option name="METHOD_NAME" value="criarShow" />
+      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.addLoteInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
+      <option name="METHOD_NAME" value="addLoteInvalido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.addLoteInvalidoNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
+      <option name="METHOD_NAME" value="addLoteInvalidoNegativo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.addLoteNulo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
+      <option name="METHOD_NAME" value="addLoteNulo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.addLoteSemShow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
+      <option name="METHOD_NAME" value="addLoteSemShow" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -51,11 +147,275 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TicketmanTest.criarShow" />
+        <item itemvalue="JUnit.TicketmanTest" />
+        <item itemvalue="JUnit.TicketmanTest.addLoteSemShow" />
+        <item itemvalue="JUnit.TicketmanTest.addLoteNulo" />
+        <item itemvalue="JUnit.TicketmanTest.addLoteInvalido" />
+        <item itemvalue="JUnit.TicketmanTest.addLoteInvalidoNegativo" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="" />
+      <created>1722356774538</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722356774538</updated>
+      <workItem from="1722356775660" duration="29507000" />
+      <workItem from="1722457969670" duration="4749000" />
+    </task>
+    <task id="LOCAL-00001" summary="Second Commit">
+      <created>1722369127416</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722369127416</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Primeiro teste.">
+      <created>1722370337380</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722370337380</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Criando o equals de Show.">
+      <created>1722374342643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722374342643</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Primeiro teste correto.">
+      <created>1722374668245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722374668245</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Segundo teste (criar show diferente) correto.">
+      <created>1722375134156</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722375134156</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Teste de Pegar um Show em Específico.">
+      <created>1722377258374</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722377258374</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Teste de Pegar um Show em Específico Feito Mas Falho.">
+      <created>1722377898461</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722377898461</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Teste de Pegar um Show em Específico Feito Corretamente.">
+      <created>1722379837088</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722379837088</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Teste de Criação de Lote.">
+      <created>1722380136780</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722380136780</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Teste de Criação de Lote Correto, Surpreendendo todos.">
+      <created>1722387673430</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722387673430</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Enxugando o código.">
+      <created>1722388885775</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722388885775</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Teste de Pegar os Lotes de um Show Específico.">
+      <created>1722389552894</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722389552894</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Teste Alterado de Pegar os Lotes de um Show Específico">
+      <created>1722390696924</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722390696924</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Teste Alterado de Pegar os Lotes de um Show Específico Correto.">
+      <created>1722391130296</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722391130296</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Teste para Comprar Ingresso.">
+      <created>1722391709299</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722391709299</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Teste Alterado para Comprar Ingresso, Introdução de TipoIngresso.">
+      <created>1722391949249</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722391949249</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Teste Alterado para Comprar Ingresso Correto.">
+      <created>1722393924871</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722393924871</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Teste para Comprar um Lote, esqueci de fazer na ordem certa.">
+      <created>1722395153709</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722395153709</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Teste para Gerar Relatório. Irá falhar feio.">
+      <created>1722395552959</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722395552959</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Alterações em comprarLote e comprarIngresso para facilitar criação de relatório.">
+      <created>1722396201234</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722396201234</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Criação do teste gerarRelatorio e implementação das funcionalidades de gerarRelatório.">
+      <created>1722399154618</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1722399154618</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Remoção da opção da compra individual de ingresso.">
+      <created>1722399324643</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1722399324643</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Novo Dia, Novo Commit.">
+      <created>1722458054206</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1722458054206</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Base concluída, criando proteções nos testes. Em retrospectiva, acho que foi uma má forma de implementar o código, mas vivendo e aprendendo.&#10;Criação do teste criarShowInvalido.">
+      <created>1722459516938</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1722459516938</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Teste criarShowInvalido passando corretamente, como deveria, com sucesso, mais sinônimos.">
+      <created>1722459721162</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1722459721163</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Teste para criar Show com Parâmetros nulos.">
+      <created>1722459964794</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1722459964794</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Teste para criar Show com Parâmetros nulos passando com sucesso; refatoração do nome de algumas variáveis (dataShow1 para dataShow, art1 para art, etc).">
+      <created>1722460317928</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1722460317928</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Teste para criar pegar um ShowInvalido, passando surpreendentemente porque eu esqueci que já tinha implementado proteções para isso. Bom trabalho eu-do-passado.">
+      <created>1722460689853</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1722460689853</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Teste para criar um Lote com números negativos.">
+      <created>1722461131976</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1722461131976</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira.">
+      <created>1722462311134</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1722462311134</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Teste de Criação de Lote." />
+    <MESSAGE value="Teste de Criação de Lote Correto, Surpreendendo todos." />
+    <MESSAGE value="Enxugando o código." />
+    <MESSAGE value="Teste de Pegar os Lotes de um Show Específico." />
+    <MESSAGE value="Teste Alterado de Pegar os Lotes de um Show Específico" />
+    <MESSAGE value="Teste Alterado de Pegar os Lotes de um Show Específico Correto." />
+    <MESSAGE value="Teste para Comprar Ingresso." />
+    <MESSAGE value="Teste Alterado para Comprar Ingresso, Introdução de TipoIngresso." />
+    <MESSAGE value="Teste Alterado para Comprar Ingresso Correto." />
+    <MESSAGE value="Teste para Comprar um Lote, esqueci de fazer na ordem certa." />
+    <MESSAGE value="Teste para Gerar Relatório. Irá falhar feio." />
+    <MESSAGE value="Alterações em comprarLote e comprarIngresso para facilitar criação de relatório." />
+    <MESSAGE value="Criação do teste gerarRelatorio e implementação das funcionalidades de gerarRelatório." />
+    <MESSAGE value="Remoção da opção da compra individual de ingresso." />
+    <MESSAGE value="Novo Dia, Novo Commit." />
+    <MESSAGE value="Base concluída, criando proteções nos testes. Em retrospectiva, acho que foi uma má forma de implementar o código, mas vivendo e aprendendo.&#10;Criação do teste criarShowInvalido." />
+    <MESSAGE value="Teste criarShowInvalido passando corretamente, como deveria, com sucesso, mais sinônimos." />
+    <MESSAGE value="Teste para criar Show com Parâmetros nulos." />
+    <MESSAGE value="Teste para criar Show com Parâmetros nulos passando com sucesso; refatoração do nome de algumas variáveis (dataShow1 para dataShow, art1 para art, etc)." />
+    <MESSAGE value="Teste para criar pegar um ShowInvalido, passando surpreendentemente porque eu esqueci que já tinha implementado proteções para isso. Bom trabalho eu-do-passado." />
+    <MESSAGE value="Teste para criar um Lote com números negativos." />
+    <MESSAGE value="Teste para criar um Lote com números negativos passando com Sucesso." />
+    <MESSAGE value="Teste para criar um Lote com números inválidos pelos parâmetros do cliente." />
+    <MESSAGE value="Teste para criar um Lote com números inválidos pelos parâmetros do cliente passando com sucesso." />
+    <MESSAGE value="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/vvvs_ex2$TicketmanTest_criarShow.ic" NAME="TicketmanTest.criarShow Coverage Results" MODIFIED="1722458300050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.vvs.gabrielEx2.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/vvvs_ex2$TicketmanTest.ic" NAME="TicketmanTest Coverage Results" MODIFIED="1722462325465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.vvs.gabrielEx2.*</FILTER>
+    </SUITE>
   </component>
 </project>
