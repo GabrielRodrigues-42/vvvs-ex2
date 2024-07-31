@@ -6,9 +6,10 @@ import java.util.Date;
 
 @Data
 public class Conta {
-    private final Integer codigo;
-    private final Date data;
-    private final double valorPago;
+    private Integer codigo;
+    private Date data;
+    private double valorPago;
+    private Pagamento pagamento;
 
     public Conta(Integer codigo, Date data, double valorPago) {
         this.codigo = codigo;
