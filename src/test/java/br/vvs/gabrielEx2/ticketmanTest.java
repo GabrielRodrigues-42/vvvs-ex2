@@ -1,6 +1,5 @@
 package br.vvs.gabrielEx2;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,11 +21,17 @@ class TicketmanTest {
     private int despesas2;
     //private Ticketman ticketman;
     private Show show1;
+    private String show1ID;
+    private String show2ID;
     private Show show2;
     private Lote lote1;
+    private String lote1ID;
     private Lote lote2;
+    private String lote2ID;
     private Lote lote3;
+    private String lote3ID;
     private List<Lote> lotes;
+    private Ingresso ingresso1l1;
 
     @BeforeEach
     public void setup() {
@@ -42,13 +47,19 @@ class TicketmanTest {
         this.despesas1 = 1000;
         this.despesas2 = 2000;
         this.show1 = new Show(dataShow1, art1, cache1, despesas1, false);
+        this.show1ID = "22012024Chappell Roan";
         this.show2 = new Show(dataShow2, art2, cache2, despesas2, true);
+        this.show2ID = "25122024WILLOW";
         this.lote1 = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0);
+        this.lote1ID = "22012024Chappell Roan-0";
         this.lote2 = new Lote("25122024WILLOW-0", 20, 10, 70, 25);
-        this.lote3 = new Lote("22012024Chappell Roan-0", 30, 10, 60, 15);
+        this.lote2ID = "25122024WILLOW-0";
+        this.lote3 = new Lote("22012024Chappell Roan-1", 30, 10, 60, 15);
+        this.lote3ID = "22012024Chappell Roan-1";
         this.lotes = new ArrayList<>();
         this.lotes.add(lote1);
         this.lotes.add(lote3);
+        this.ingresso1l1 = new Ingresso(0, "VIP", false);
 
     }
 
@@ -100,11 +111,22 @@ class TicketmanTest {
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
         ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15);
         assertEquals(lotes.size(), ticketman.getLotes("22012024Chappell Roan").size());
-        String loteToString = "22012024Chappell Roan-0 Ingressos: 100, Vip: 25, Meia: 10" + "\n" +
-                "22012024Chappell Roan-1 Ingressos: 100, Vip: 30, Meia: 10" + "\n";
+        String loteToString = """
+                22012024Chappell Roan-0 Ingressos: 100, Vip: 25, Meia: 10
+                22012024Chappell Roan-1 Ingressos: 100, Vip: 30, Meia: 10
+                """;
         System.out.println(loteToString);
         System.out.println(ticketman.getLotesString("22012024Chappell Roan"));
         assertEquals(ticketman.getLotesString("22012024Chappell Roan"), loteToString);
+    }
+
+    @Test
+    void comprarIngresso() {
+        System.out.println("Comprar um Ingresso");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
+        assertTrue(ingresso1.equals(ticketman.comprarIngresso(show1ID, lote1ID, "VIP"));
     }
 
 
