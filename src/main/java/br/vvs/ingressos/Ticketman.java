@@ -101,6 +101,9 @@ public class Ticketman {
 
     public String getLotesString(String showID) {
         List<Lote> lotes = getShow(showID).getLotes();
+        if(lotes.size() == 0) {
+            return "Show não possui lotes.";
+        }
         StringBuilder lotesStringBuilder = new StringBuilder();
 
         for (Lote lote : lotes) {

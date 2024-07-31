@@ -82,7 +82,7 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketmanTest">
+  <component name="RunManager" selected="JUnit.TicketmanTest.getLotesInexistente">
     <configuration name="TicketmanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -109,22 +109,6 @@
       <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
       <option name="METHOD_NAME" value="addLoteInvalido" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketmanTest.addLoteInvalidoNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.gabrielEx2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.gabrielEx2" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.gabrielEx2.TicketmanTest" />
-      <option name="METHOD_NAME" value="addLoteInvalidoNegativo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,13 +146,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TicketmanTest.getLotesInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
+      <option name="METHOD_NAME" value="getLotesInexistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicketmanTest.getLotesInexistente" />
         <item itemvalue="JUnit.TicketmanTest" />
         <item itemvalue="JUnit.TicketmanTest.addLoteSemShow" />
         <item itemvalue="JUnit.TicketmanTest.addLoteNulo" />
         <item itemvalue="JUnit.TicketmanTest.addLoteInvalido" />
-        <item itemvalue="JUnit.TicketmanTest.addLoteInvalidoNegativo" />
       </list>
     </recent_temporary>
   </component>
