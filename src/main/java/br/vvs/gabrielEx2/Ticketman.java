@@ -21,6 +21,10 @@ public class Ticketman {
         return show;
     }
 
+    public Lote criarLote(String showID, int vip, int meia, int normal, int desconto) {
+        return getShow(showID).criarLote(vip, meia, normal, desconto);
+    }
+
     public int getNumeroDeShows() {
         return numeroDeShows;
     }

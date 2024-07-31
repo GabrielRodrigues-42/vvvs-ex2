@@ -79,8 +79,8 @@ class ticketmanTest {
         Show show2 = new Show(dataShow2, art2, cache2, despesas2, true);
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
-        Lote lote = new Lote(100, 0);
-        assertTrue(lote.equals(ticketman.getShow("22012024Chappell Roan").addLote(100, 0)));
+        Lote lote = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0);
+        assertTrue(lote.equals(ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0)));
     }
 
 

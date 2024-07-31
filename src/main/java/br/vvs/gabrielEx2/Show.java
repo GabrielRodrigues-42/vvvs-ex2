@@ -3,6 +3,7 @@ package br.vvs.gabrielEx2;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.UUID;
 
 public class Show {
     private String id;
@@ -27,6 +28,13 @@ public class Show {
         //System.out.println(id);
 
 
+    }
+
+    public Lote criarLote(int vip, int meia, int normal, int desconto) {
+        String loteID = this.id + "-" + lotes.size();
+        Lote lote = new Lote(loteID, vip, meia, normal, desconto);
+        lotes.add(lote);
+        return lote;
     }
 
     public boolean equals(Show show) {
