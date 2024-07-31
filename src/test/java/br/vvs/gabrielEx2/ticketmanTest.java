@@ -145,9 +145,11 @@ class TicketmanTest {
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
-        ticketman.comprarIngresso(show1ID, lote1ID, "VIP");
-        ticketman.comprarIngresso(show1ID, lote1ID, "MEIA");
-        ticketman.comprarIngresso(show1ID, lote1ID, "NORMAL");
+        ticketman.criarLote(show1ID, 30, 10, 60, 0);
+        ticketman.comprarLote(show1ID, lote1ID);
+        String relatorio = "25 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, 65 Ingressos NORMAIS vendidos. \n" +
+                "Receita Líquida: ; Status Financeiro: Lucro";
+        assertEquals(relatorio, ticketman.gerarRelatorio(show1ID));
     }
 
 
