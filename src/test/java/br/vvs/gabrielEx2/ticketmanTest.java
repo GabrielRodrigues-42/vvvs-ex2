@@ -35,7 +35,6 @@ class TicketmanTest {
 
     @BeforeEach
     public void setup() {
-        System.out.println("Once Upon a Time");
         this.dataShow1 = new GregorianCalendar();
         dataShow1.set(2024, 0, 22);
         this.dataShow2 = new GregorianCalendar();
@@ -115,9 +114,19 @@ class TicketmanTest {
                 22012024Chappell Roan-0 Ingressos: 100, Vip: 25, Meia: 10
                 22012024Chappell Roan-1 Ingressos: 100, Vip: 30, Meia: 10
                 """;
-        System.out.println(loteToString);
-        System.out.println(ticketman.getLotesString("22012024Chappell Roan"));
         assertEquals(ticketman.getLotesString("22012024Chappell Roan"), loteToString);
+    }
+
+    @Test
+    void comprarLote() {
+        System.out.println("Comprar um Lote");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
+        assertTrue(lote1.equals(ticketman.getLote(show1ID, lote1ID)));
+        lote1.comprarLote();
+        ticketman.comprarLote(show1ID, lote1ID);
+        assertTrue(lote1.isStatus() == ticketman.getLoteStatus(show1ID, lote1ID));
     }
 
     @Test
@@ -127,6 +136,18 @@ class TicketmanTest {
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
         assertTrue(ingresso1l1.equals(ticketman.comprarIngresso(show1ID, lote1ID, "VIP")));
+    }
+
+
+    @Test
+    void gerarRelatorio() {
+        System.out.println("Gerar o relatório de um Show");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
+        ticketman.comprarIngresso(show1ID, lote1ID, "VIP");
+        ticketman.comprarIngresso(show1ID, lote1ID, "MEIA");
+        ticketman.comprarIngresso(show1ID, lote1ID, "NORMAL");
     }
 
 

@@ -4,16 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Lote {
+    public boolean status;
     private String id;
     private int numeroDeIngressos;
     private int numeroVip;
     private int numeroMeia;
+
+
     private int numeroNormal;
     private List<Ingresso> ingressos;
     private int desconto;
 
     public Lote(String id, int vip, int meia, int normal, int desconto) {
         this.id = id;
+        this.status = false;
         this.ingressos = new ArrayList<>();
         this.desconto = desconto;
         this.numeroVip = vip;
@@ -41,6 +45,13 @@ public class Lote {
 
     }
 
+    public void comprarLote() {
+        for(int i = 0; i < ingressos.size(); i++) {
+            ingressos.get(i).comprar();
+        }
+        setStatus(true);
+    }
+
     public boolean equals(Lote lote) {
         if (lote.getId().equals(this.id)) {
             return true;
@@ -49,6 +60,14 @@ public class Lote {
     }
     public String getId() {
         return id;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     public int getNumeroDeIngressos() {

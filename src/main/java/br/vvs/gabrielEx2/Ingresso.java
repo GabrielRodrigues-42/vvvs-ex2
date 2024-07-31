@@ -35,7 +35,7 @@ public class Ingresso {
 
     public Ingresso comprar() {
         this.status = true;
-        System.out.println("Ingresso Comprado");
+        //System.out.println("Ingresso Comprado");
         return this;
     }
 

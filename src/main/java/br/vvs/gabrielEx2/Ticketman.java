@@ -42,6 +42,10 @@ public class Ticketman {
         return getShow(showID).getLotes();
     }
 
+    public Lote getLote(String showID, String loteID) {
+        return getShow(showID).getLote(loteID);
+    }
+
     public String getLotesString(String showID) {
         List<Lote> lotes = getShow(showID).getLotes();
         StringBuilder lotesStringBuilder = new StringBuilder();
@@ -54,21 +58,30 @@ public class Ticketman {
     }
 
     public Ingresso comprarIngresso(String showID, String lote1ID, String tipo) {
-        System.out.println("Comprando Ingresso...");
+        //System.out.println("Comprando Ingresso...");
         if(tipo.equals("VIP")) {
-            System.out.println("VIP");
+            //System.out.println("VIP");
             return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.VIP);
         }
         if(tipo.equals("MEIA")) {
-            System.out.println("MEIA");
+            //System.out.println("MEIA");
             return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.MEIA);
 
         }
         if(tipo.equals("NORMAL")) {
-            System.out.println("NORMAL");
+            //System.out.println("NORMAL");
             return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.NORMAL);
 
         }
         throw new IllegalArgumentException("Ingresso Esgotado");
+    }
+
+    public boolean getLoteStatus(String showID, String loteID) {
+        return getLote(showID, loteID).isStatus();
+    }
+
+
+    public void comprarLote(String show1ID, String lote1ID) {
+        getLote(show1ID, lote1ID).comprarLote();
     }
 }
