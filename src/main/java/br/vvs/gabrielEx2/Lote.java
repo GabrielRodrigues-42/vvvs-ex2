@@ -28,29 +28,39 @@ public class Lote {
         this.precoIngresso = precoIngresso*100; //valor multiplicado por 100 para eliminar centavos
         this.valorTotal = (this.precoIngresso*normal) + (this.precoIngresso*vip*2) + (this.precoIngresso*meia/2);
         numeroDeIngressos = vip+meia+normal;
+        verificarEntradas(vip, meia, normal, desconto, precoIngresso);
+        adicionarIngressos();
+        this.numeroDeIngressos = ingressos.size();
+
+    }
+
+    private void verificarEntradas(int vip, int meia, int normal, int desconto, int precoIngresso) {
         if(vip > numeroDeIngressos*0.3 || vip < numeroDeIngressos*0.2 ||
                 meia > numeroDeIngressos*0.1 || meia < numeroDeIngressos*0.1) {
             throw new IllegalArgumentException("Distribuição de Ingressos Inválida");
         }
+        if(desconto > 25) {
+            throw new IllegalArgumentException("Desconto Inválido");
+        }
+    }
+    private void adicionarIngressos() {
         int index = 0;
         String ingressoID = id + "-" + index;
-        for(int i = 0; i < vip; i++) {
+        for(int i = 0; i < this.numeroVip; i++) {
             index++;
             ingressoID = id + "-" + index;
             ingressos.add(new Ingresso(TipoIngresso.VIP, ingressoID));
         }
-        for(int i = 0; i < meia; i++) {
+        for(int i = 0; i < this.numeroMeia; i++) {
             index++;
             ingressoID = id + "-" + index;
             ingressos.add(new Ingresso(TipoIngresso.MEIA, ingressoID));
         }
-        for(int i = 0; i < normal; i++) {
+        for(int i = 0; i < this.numeroNormal; i++) {
             index++;
             ingressoID = id + "-" + index;
             ingressos.add(new Ingresso(TipoIngresso.NORMAL, ingressoID));
         }
-        this.numeroDeIngressos = ingressos.size();
-
     }
 
     public void comprarLote() {

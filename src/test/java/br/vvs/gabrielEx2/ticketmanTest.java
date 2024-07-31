@@ -181,8 +181,44 @@ class TicketmanTest {
     }
 
     @Test
+    void addLoteInvalido() {
+        System.out.println("Tentar criar um lote com números inválidos para ingressos, desconto e preço");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 31, 10, 70, 0, 10);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 25, 11, 65, 0, 10);
+                });
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(this.show1ID, 25, 10, 65, 26, 10);
+                });
+    }
+
+    @Test
     void addLoteNulo() {
         System.out.println("Tentar criar um lote com valores nulos");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote(null, 30, 10, 70, 0, 10);
+                });
+    }
+
+    @Test
+    void addLoteSemShow() {
+        System.out.println("Tentar criar um lote em um show que não existe");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.criarLote("NXZero", 30, 10, 70, 0, 10);
+                });
     }
 
 

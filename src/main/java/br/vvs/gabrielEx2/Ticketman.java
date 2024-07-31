@@ -54,8 +54,29 @@ public class Ticketman {
     }
 
     public Lote criarLote(String showID, int vip, int meia, int normal, int desconto, int precoIngresso) {
+        verificarLotePositivo(vip, meia, normal, desconto, precoIngresso);
         return getShow(showID).criarLote(vip, meia, normal, desconto, precoIngresso);
     }
+
+    public void verificarLotePositivo(int vip, int meia, int normal, int desconto, int precoIngresso) {
+        if (vip <= 0) {
+            throw new IllegalArgumentException("O VIP deve ser um valor positivo.");
+        }
+        if (meia <= 0) {
+            throw new IllegalArgumentException("O MEIA deve ser um valor positivo.");
+        }
+        if (normal <= 0) {
+            throw new IllegalArgumentException("O NORMAL deve ser um valor positivo.");
+        }
+        if (desconto < 0) {
+            throw new IllegalArgumentException("O desconto deve ser um valor positivo.");
+        }
+        if (precoIngresso <= 0) {
+            throw new IllegalArgumentException("O Preço do Ingresso deve ser um valor positivo.");
+        }
+    }
+
+
 
     public int getNumeroDeShows() {
         return numeroDeShows;
