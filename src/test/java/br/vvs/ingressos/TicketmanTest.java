@@ -303,7 +303,7 @@ class TicketmanTest {
 
 
     @Test
-    void gerarRelatorio() {
+    void gerarRelatorio1() {
         System.out.println("Gerar o relatório de um Show");
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
@@ -316,6 +316,22 @@ class TicketmanTest {
         System.out.println(relatorio);
         System.out.println(ticketman.gerarRelatorio(show1ID));
         assertEquals(relatorio, ticketman.gerarRelatorio(show1ID));
+    }
+
+    @Test
+    void gerarRelatorio2() {
+        System.out.println("Gerar o relatório de um Show");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
+        ticketman.criarLote(show2ID, 30, 10, 60, 5, 20);
+        ticketman.comprarLote(show2ID, lote2ID);
+        int receitaBruta = 237500;
+        String relatorio = "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
+                "60 Ingressos NORMAIS vendidos. \n" +
+                "Receita Líquida: -192500; Status Financeiro: PREJUÍZO";
+        System.out.println(relatorio);
+        System.out.println(ticketman.gerarRelatorio(show2ID));
+        assertEquals(relatorio, ticketman.gerarRelatorio(show2ID));
     }
 
 
