@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,6 +23,9 @@ class TicketmanTest {
     private Show show1;
     private Show show2;
     private Lote lote1;
+    private Lote lote2;
+    private Lote lote3;
+    private List<Lote> lotes;
 
     @BeforeEach
     public void setup() {
@@ -39,6 +43,11 @@ class TicketmanTest {
         this.show1 = new Show(dataShow1, art1, cache1, despesas1, false);
         this.show2 = new Show(dataShow2, art2, cache2, despesas2, true);
         this.lote1 = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0);
+        this.lote2 = new Lote("25122024WILLOW-0", 20, 10, 70, 25);
+        this.lote3 = new Lote("22012024Chappell Roan-0", 30, 10, 60, 15);
+        this.lotes.add(lote1);
+        this.lotes.add(lote3);
+
     }
 
     @Test
@@ -76,9 +85,21 @@ class TicketmanTest {
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
-        Lote lote1 = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0);
         assertTrue(lote1.equals(ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0)));
+        assertFalse(lote2.equals((ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0))));
+        assertTrue(lote2.equals(ticketman.criarLote("25122024WILLOW", 20, 10, 70, 25)));
     }
+
+    @Test
+    void getLotes() {
+        System.out.println("Pegar os lotes de um Show Específico");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
+        ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15);
+        assertEquals(lotes, ticketman.getLotes("22012024Chappell Roan"));
+    }
+
 
 
 
