@@ -3,8 +3,6 @@ package br.vvs.gabrielEx2;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.UUID;
-
 public class Show {
     private String id;
     private Calendar data;
@@ -73,6 +71,14 @@ public class Show {
 
     public List<Lote> getLotes() {
         return lotes;
+    }
+    public Lote getLote(String loteID) {
+        for(int i = 0; i < lotes.size(); i++) {
+            if(lotes.get(i).getID().equals(loteID)) {
+                return lotes.get(i);
+            }
+        }
+        throw new IllegalArgumentException("Lote não existe");
     }
 
     public String toString() {

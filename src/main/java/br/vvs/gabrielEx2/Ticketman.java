@@ -32,7 +32,6 @@ public class Ticketman {
     public Show getShow(String id) {
         for(int i = 0; i < shows.size(); i++) {
             if(shows.get(i).getID().equals(id)) {
-                shows.get(i).toString();
                 return shows.get(i);
             }
         }
@@ -52,5 +51,24 @@ public class Ticketman {
         }
 
         return lotesStringBuilder.toString();
+    }
+
+    public Ingresso comprarIngresso(String showID, String lote1ID, String tipo) {
+        System.out.println("Comprando Ingresso...");
+        if(tipo.equals("VIP")) {
+            System.out.println("VIP");
+            return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.VIP);
+        }
+        if(tipo.equals("MEIA")) {
+            System.out.println("MEIA");
+            return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.MEIA);
+
+        }
+        if(tipo.equals("NORMAL")) {
+            System.out.println("NORMAL");
+            return getShow(showID).getLote(lote1ID).comprarIngresso(TipoIngresso.NORMAL);
+
+        }
+        throw new IllegalArgumentException("Ingresso Esgotado");
     }
 }

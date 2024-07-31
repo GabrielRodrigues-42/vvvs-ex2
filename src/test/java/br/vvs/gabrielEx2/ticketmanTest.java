@@ -59,7 +59,7 @@ class TicketmanTest {
         this.lotes = new ArrayList<>();
         this.lotes.add(lote1);
         this.lotes.add(lote3);
-        this.ingresso1l1 = new Ingresso(0, TipoIngresso.VIP, false);
+        this.ingresso1l1 = new Ingresso("22012024Chappell Roan-0-1", TipoIngresso.VIP, false);
 
     }
 
@@ -126,7 +126,7 @@ class TicketmanTest {
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
-        assertTrue(ingresso1.equals(ticketman.comprarIngresso(show1ID, lote1ID, "VIP"));
+        assertTrue(ingresso1l1.equals(ticketman.comprarIngresso(show1ID, lote1ID, "VIP")));
     }
 
 

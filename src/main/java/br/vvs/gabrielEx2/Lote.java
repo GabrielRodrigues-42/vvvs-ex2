@@ -24,14 +24,18 @@ public class Lote {
                 meia > numeroDeIngressos*0.1 || meia < numeroDeIngressos*0.1) {
             throw new IllegalArgumentException("Distribuição de Ingressos Inválida");
         }
+        int index = 0;
+        String ingressoID = id + "-" + index;
         for(int i = 0; i < vip; i++) {
-            ingressos.add(new Ingresso("VIP"));
+            index++;
+            ingressoID = id + "-" + index;
+            ingressos.add(new Ingresso(TipoIngresso.VIP, ingressoID));
         }
         for(int i = 0; i < meia; i++) {
-            ingressos.add(new Ingresso("MEIA"));
+            ingressos.add(new Ingresso(TipoIngresso.MEIA, ingressoID));
         }
         for(int i = 0; i < normal; i++) {
-            ingressos.add(new Ingresso("normal"));
+            ingressos.add(new Ingresso(TipoIngresso.NORMAL, ingressoID));
         }
         this.numeroDeIngressos = ingressos.size();
 
@@ -78,4 +82,17 @@ public class Lote {
         return str;
     }
 
+    public String getID() {
+        return id;
+    }
+
+    public Ingresso comprarIngresso(TipoIngresso tipo) {
+        for(int i = 0; i < ingressos.size(); i++) {
+            if(ingressos.get(i).getTipo().equals(tipo) && ingressos.get(i).isStatus() == false) {
+                return ingressos.get(i).comprar();
+
+            }
+        }
+        throw new IllegalArgumentException("Ingresso Esgotado ou Indisponível");
+    }
 }
