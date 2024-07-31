@@ -279,6 +279,17 @@ class TicketmanTest {
         assertEquals(lote1.isStatus(), ticketman.getLoteStatus(show1ID, lote1ID));
     }
 
+    @Test
+    void comprarLoteInexistente() {
+        System.out.println("Comprar um Lote que não existe");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.comprarLote(show1ID, lote1ID);
+                });
+    }
+
     /*
     @Test
     void comprarIngresso() {
