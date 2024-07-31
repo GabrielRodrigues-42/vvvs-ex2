@@ -9,13 +9,15 @@ public class Lote {
     private int numeroDeIngressos;
     private int numeroVip;
     private int numeroMeia;
+    private int precoIngresso;
+    private int valorTotal;
 
 
     private int numeroNormal;
     private List<Ingresso> ingressos;
     private int desconto;
 
-    public Lote(String id, int vip, int meia, int normal, int desconto) {
+    public Lote(String id, int vip, int meia, int normal, int desconto, int precoIngresso) {
         this.id = id;
         this.status = false;
         this.ingressos = new ArrayList<>();
@@ -23,6 +25,8 @@ public class Lote {
         this.numeroVip = vip;
         this.numeroMeia = meia;
         this.numeroNormal = normal;
+        this.precoIngresso = precoIngresso*100; //valor multiplicado por 100 para eliminar centavos
+        this.valorTotal = (this.precoIngresso*normal) + (this.precoIngresso*vip*2) + (this.precoIngresso*meia/2);
         numeroDeIngressos = vip+meia+normal;
         if(vip > numeroDeIngressos*0.3 || vip < numeroDeIngressos*0.2 ||
                 meia > numeroDeIngressos*0.1 || meia < numeroDeIngressos*0.1) {
@@ -36,9 +40,13 @@ public class Lote {
             ingressos.add(new Ingresso(TipoIngresso.VIP, ingressoID));
         }
         for(int i = 0; i < meia; i++) {
+            index++;
+            ingressoID = id + "-" + index;
             ingressos.add(new Ingresso(TipoIngresso.MEIA, ingressoID));
         }
         for(int i = 0; i < normal; i++) {
+            index++;
+            ingressoID = id + "-" + index;
             ingressos.add(new Ingresso(TipoIngresso.NORMAL, ingressoID));
         }
         this.numeroDeIngressos = ingressos.size();
@@ -113,5 +121,9 @@ public class Lote {
             }
         }
         throw new IllegalArgumentException("Ingresso Esgotado ou Indisponível");
+    }
+
+    public int getValorTotal() {
+        return valorTotal;
     }
 }

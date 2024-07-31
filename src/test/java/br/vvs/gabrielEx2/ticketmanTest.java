@@ -49,11 +49,11 @@ class TicketmanTest {
         this.show1ID = "22012024Chappell Roan";
         this.show2 = new Show(dataShow2, art2, cache2, despesas2, true);
         this.show2ID = "25122024WILLOW";
-        this.lote1 = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0);
+        this.lote1 = new Lote("22012024Chappell Roan-0", 25, 10, 65, 0, 10);
         this.lote1ID = "22012024Chappell Roan-0";
-        this.lote2 = new Lote("25122024WILLOW-0", 20, 10, 70, 25);
+        this.lote2 = new Lote("25122024WILLOW-0", 20, 10, 70, 25, 10);
         this.lote2ID = "25122024WILLOW-0";
-        this.lote3 = new Lote("22012024Chappell Roan-1", 30, 10, 60, 15);
+        this.lote3 = new Lote("22012024Chappell Roan-1", 30, 10, 60, 15, 10);
         this.lote3ID = "22012024Chappell Roan-1";
         this.lotes = new ArrayList<>();
         this.lotes.add(lote1);
@@ -97,9 +97,9 @@ class TicketmanTest {
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
-        assertTrue(lote1.equals(ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0)));
-        assertFalse(lote2.equals((ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0))));
-        assertTrue(lote2.equals(ticketman.criarLote("25122024WILLOW", 20, 10, 70, 25)));
+        assertTrue(lote1.equals(ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10)));
+        assertFalse(lote2.equals((ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10))));
+        assertTrue(lote2.equals(ticketman.criarLote("25122024WILLOW", 20, 10, 70, 25, 10)));
     }
 
     @Test
@@ -107,8 +107,8 @@ class TicketmanTest {
         System.out.println("Pegar os lotes de um Show Específico");
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
-        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
-        ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
+        ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15, 10);
         assertEquals(lotes.size(), ticketman.getLotes("22012024Chappell Roan").size());
         String loteToString = """
                 22012024Chappell Roan-0 Ingressos: 100, Vip: 25, Meia: 10
@@ -122,7 +122,7 @@ class TicketmanTest {
         System.out.println("Comprar um Lote");
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
-        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
         assertTrue(lote1.equals(ticketman.getLote(show1ID, lote1ID)));
         lote1.comprarLote();
         ticketman.comprarLote(show1ID, lote1ID);
@@ -134,7 +134,7 @@ class TicketmanTest {
         System.out.println("Comprar um Ingresso");
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
-        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
         assertTrue(ingresso1l1.equals(ticketman.comprarIngresso(show1ID, lote1ID, "VIP")));
     }
 
@@ -144,11 +144,14 @@ class TicketmanTest {
         System.out.println("Gerar o relatório de um Show");
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
-        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0);
-        ticketman.criarLote(show1ID, 30, 10, 60, 0);
+        ticketman.criarLote(show1ID, 30, 10, 60, 0, 20);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
         ticketman.comprarLote(show1ID, lote1ID);
-        String relatorio = "25 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, 65 Ingressos NORMAIS vendidos. \n" +
-                "Receita Líquida: ; Status Financeiro: Lucro";
+        String relatorio = "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
+                "60 Ingressos NORMAIS vendidos. \n" +
+                "Receita Líquida: 50000; Status Financeiro: LUCRO";
+        System.out.println(relatorio);
+        System.out.println(ticketman.gerarRelatorio(show1ID));
         assertEquals(relatorio, ticketman.gerarRelatorio(show1ID));
     }
 

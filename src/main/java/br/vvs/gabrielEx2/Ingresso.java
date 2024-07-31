@@ -5,7 +5,6 @@ public class Ingresso {
     private TipoIngresso tipo;
     private boolean status;
 
-
     public Ingresso(String id, TipoIngresso tipo, boolean status) {
         this.id = id;
         this.tipo = tipo;
@@ -42,4 +41,5 @@ public class Ingresso {
     public String getId() {
         return id;
     }
+
 }

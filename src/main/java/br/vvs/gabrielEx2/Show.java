@@ -14,13 +14,16 @@ public class Show {
     private int vendidosVIP;
     private int vendidosMEIA;
     private int vendidosNORMAIS;
+    private int receita;
+    private String statusFinanceiro;
 
     public Show(Calendar data, String artista, int cache, int despesas, boolean especial) {
         this.data = data;
         this.artista = artista;
-        this.cache = cache;
-        this.despesas = despesas;
+        this.cache = cache*100; //valor multiplicado por 100 para eliminar centavos
+        this.despesas = despesas*100; //valor multiplicado por 100 para eliminar centavos
         this.especial = especial;
+        this.receita = 0 - this.cache - this.despesas;
         String day = String.format("%02d", data.get(Calendar.DAY_OF_MONTH));
         String month = String.format("%02d", data.get(Calendar.MONTH) + 1);
         String year = String.format("%04d", data.get(Calendar.YEAR));
@@ -34,9 +37,9 @@ public class Show {
 
     }
 
-    public Lote criarLote(int vip, int meia, int normal, int desconto) {
+    public Lote criarLote(int vip, int meia, int normal, int desconto, int precoIngresso) {
         String loteID = this.id + "-" + lotes.size();
-        Lote lote = new Lote(loteID, vip, meia, normal, desconto);
+        Lote lote = new Lote(loteID, vip, meia, normal, desconto, precoIngresso);
         lotes.add(lote);
         return lote;
     }
@@ -92,7 +95,13 @@ public class Show {
     }
 
     public String gerarRelatorio() {
-        return null;
+        checkStatusFinanceiro();
+        String relatorio = this.vendidosVIP + " Ingressos VIP vendidos, " + this.vendidosMEIA +
+                " Ingressos MEIA vendidos, " + this.vendidosNORMAIS +
+                " Ingressos NORMAIS vendidos. \n" +
+                "Receita Líquida: " + this.receita + "; Status Financeiro: " +
+                this.statusFinanceiro;
+        return relatorio;
     }
 
     public void comprarLote(String loteID) {
@@ -100,6 +109,21 @@ public class Show {
         this.vendidosVIP += getLote(loteID).getNumeroVip();
         this.vendidosMEIA += getLote(loteID).getNumeroMeia();
         this.vendidosNORMAIS += getLote(loteID).getNumeroNormal();
+        receita += getLote(loteID).getValorTotal();
+    }
+
+    public void checkStatusFinanceiro() {
+        if(receita > 0) {
+            this.statusFinanceiro = "LUCRO";
+        }
+        else {
+            if(receita == 0) {
+                this.statusFinanceiro = "ESTÁVEL";
+            }
+            else {
+                this.statusFinanceiro = "PREJUÍZO";
+            }
+        }
     }
 
     public Ingresso comprarIngresso(String loteID, TipoIngresso tipo) {
