@@ -14,6 +14,7 @@ public class Ticketman {
         numeroDeShows = 0;
     }
 
+    //Cria o Show, adiciona para a lista de Shows e Incrementa o NúmeroDeShows.
     public Show criarShow(Calendar dataShow, String art, int cache, int despesas, boolean especial) {
         verificarShowNulo(dataShow, art, cache, despesas, especial);
         verificarShowVazio(dataShow, art, cache, despesas);
@@ -23,8 +24,9 @@ public class Ticketman {
         return show;
     }
 
+    //Verifica se as entradas para o Show não estão vazias.
     public void verificarShowVazio(Calendar dataShow, String art, int cache, int despesas) {
-        if (art == null || art.trim().isEmpty()) {
+        if (art.trim().isEmpty()) {
             throw new IllegalArgumentException("O nome do artista não pode estar vazio.");
         }
         if (cache <= 0) {
@@ -35,6 +37,7 @@ public class Ticketman {
         }
     }
 
+    //Verificar se as entradas para Show não estão nulas.
     public void verificarShowNulo(Calendar dataShow, String art, Integer cache, Integer despesas, Boolean especial) {
         if (dataShow == null) {
             throw new IllegalArgumentException("A data do show não pode ser nula.");
@@ -53,11 +56,13 @@ public class Ticketman {
         }
     }
 
+    //Cria um Lote.
     public Lote criarLote(String showID, int vip, int meia, int normal, int desconto, int precoIngresso) {
         verificarLotePositivo(vip, meia, normal, desconto, precoIngresso);
         return getShow(showID).criarLote(vip, meia, normal, desconto, precoIngresso);
     }
 
+    //Verifica se os valores de entrada do Lote são positivos.
     public void verificarLotePositivo(int vip, int meia, int normal, int desconto, int precoIngresso) {
         if (vip <= 0) {
             throw new IllegalArgumentException("O VIP deve ser um valor positivo.");
@@ -99,6 +104,7 @@ public class Ticketman {
         return getShow(showID).getLote(loteID);
     }
 
+    //Retorna a representação dos Lotes de um Show no formato de String.
     public String getLotesString(String showID) {
         List<Lote> lotes = getShow(showID).getLotes();
         if(lotes.size() == 0) {

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="Teste para gerar um Relatório em um dia especial.">
+    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Lote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Lote.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Ticketman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Ticketman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Show.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,31 +37,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/pingu/OneDrive/Documentos/GitHub/vvvs-ex2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pingu/OneDrive/Documentos/GitHub/vvvs-ex2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.vvs.gabrielEx2" />
@@ -74,7 +73,7 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketmanTest.gerarRelatorio1">
+  <component name="RunManager" selected="JUnit.TicketmanTest.criarShowEmDiaInválido">
     <configuration name="TicketmanTest.comprarLoteInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -86,6 +85,22 @@
       <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
       <option name="METHOD_NAME" value="comprarLoteInexistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanTest.criarShowEmDiaInválido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
+      <option name="METHOD_NAME" value="criarShowEmDiaInválido" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,22 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketmanTest.getLote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.ingressos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
-      <option name="METHOD_NAME" value="getLote" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TicketmanTest.getLoteInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -157,24 +156,25 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicketmanTest.criarShowEmDiaInválido" />
         <item itemvalue="JUnit.TicketmanTest.gerarRelatorio1" />
         <item itemvalue="JUnit.TicketmanTest.gerarRelatorio2" />
         <item itemvalue="JUnit.TicketmanTest.comprarLoteInexistente" />
         <item itemvalue="JUnit.TicketmanTest.getLoteInexistente" />
-        <item itemvalue="JUnit.TicketmanTest.getLote" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="" />
+      <changelist id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="" />
       <created>1722356774538</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1722356774538</updated>
       <workItem from="1722356775660" duration="29507000" />
       <workItem from="1722457969670" duration="4749000" />
+      <workItem from="1722474267249" duration="826000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1722369127416</created>
@@ -428,15 +428,27 @@
       <option name="project" value="LOCAL" />
       <updated>1722467693135</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Teste para gerar um Relatório em um dia especial passando com sucesso, mudando formato do relatório para incluir o Show.">
+      <created>1722469396176</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1722469396176</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Teste para criar um Show em um dia que não existe.">
+      <created>1722469642479</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1722469642479</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Teste para Comprar Ingresso." />
-    <MESSAGE value="Teste Alterado para Comprar Ingresso, Introdução de TipoIngresso." />
     <MESSAGE value="Teste Alterado para Comprar Ingresso Correto." />
     <MESSAGE value="Teste para Comprar um Lote, esqueci de fazer na ordem certa." />
     <MESSAGE value="Teste para Gerar Relatório. Irá falhar feio." />
@@ -460,7 +472,9 @@
     <MESSAGE value="Testes getLote para pegar um lote específico e getLoteInexistente para pegar um lote que nunca foi criado.&#10;Ambos passam de sucesso na primeira tentativa." />
     <MESSAGE value="Testes para comprar um Lote que não Existe, passando de primeira com sucesso." />
     <MESSAGE value="Teste para gerar um Relatório em um dia especial." />
-    <option name="LAST_COMMIT_MESSAGE" value="Teste para gerar um Relatório em um dia especial." />
+    <MESSAGE value="Teste para gerar um Relatório em um dia especial passando com sucesso, mudando formato do relatório para incluir o Show." />
+    <MESSAGE value="Teste para criar um Show em um dia que não existe." />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste para criar um Show em um dia que não existe." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vvvs_ex2$TicketmanTest_criarShow.ic" NAME="TicketmanTest.criarShow Coverage Results" MODIFIED="1722458300050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
