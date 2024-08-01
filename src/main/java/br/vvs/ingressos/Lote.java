@@ -25,8 +25,8 @@ public class Lote {
         this.numeroVip = vip;
         this.numeroMeia = meia;
         this.numeroNormal = normal;
-        this.precoIngresso = precoIngresso*100; //valor multiplicado por 100 para eliminar centavos
-        this.valorTotal = (this.precoIngresso*normal) + (this.precoIngresso*vip*2) + (this.precoIngresso*meia/2);
+        this.precoIngresso = precoIngresso*(100-desconto); //valor multiplicado por 100 para eliminar centavos
+        this.valorTotal = ((this.precoIngresso*normal) + (this.precoIngresso*vip*2) + (this.precoIngresso*meia/2));
         numeroDeIngressos = vip+meia+normal;
         verificarEntradas(vip, meia, normal, desconto, precoIngresso);
         adicionarIngressos();
@@ -34,6 +34,7 @@ public class Lote {
 
     }
 
+    //Verifica se as entradas são aceitaveis para os parâmetros do projeto.
     private void verificarEntradas(int vip, int meia, int normal, int desconto, int precoIngresso) {
         if(vip > numeroDeIngressos*0.3 || vip < numeroDeIngressos*0.2 ||
                 meia > numeroDeIngressos*0.1 || meia < numeroDeIngressos*0.1) {
@@ -43,6 +44,8 @@ public class Lote {
             throw new IllegalArgumentException("Desconto Inválido");
         }
     }
+
+    //Cria os ingressos do Lote.
     private void adicionarIngressos() {
         int index = 0;
         String ingressoID = id + "-" + index;
@@ -63,6 +66,7 @@ public class Lote {
         }
     }
 
+    //Compra todos os ingressos e muda o status para true, simbolizando a compra.
     public void comprarLote() {
         for(int i = 0; i < ingressos.size(); i++) {
             ingressos.get(i).comprar();
@@ -70,6 +74,7 @@ public class Lote {
         setStatus(true);
     }
 
+    //Compara dois Lotes e retorna true caso tenham o mesmo ID.
     public boolean equals(Lote lote) {
         if (lote.getId().equals(this.id)) {
             return true;
@@ -112,6 +117,7 @@ public class Lote {
         return desconto;
     }
 
+    //Cria a representação em String de um Lote.
     public String toString() {
         String str = id + " Ingressos: " + numeroDeIngressos;
         String distribuicaoIngressos = ", Vip: " + numeroVip + ", Meia: " + numeroMeia;

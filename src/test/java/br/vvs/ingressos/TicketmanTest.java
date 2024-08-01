@@ -95,6 +95,7 @@ class TicketmanTest {
 
     }
 
+
     @Test
     void criarShowNulo() {
         System.out.println("Tentar criar um Show Nulo");
@@ -222,6 +223,26 @@ class TicketmanTest {
     }
 
 
+    @Test
+    void getLote() {
+        System.out.println("Pegar um lote Específico");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
+        ticketman.criarLote("22012024Chappell Roan", 30, 10, 60, 15, 10);
+        assertTrue(lotes.get(0).equals(ticketman.getLote(show1ID, lote1ID)));
+        assertTrue(lotes.get(1).equals(ticketman.getLote(show1ID, lote3ID)));
+    }
+
+    @Test
+    void getLoteInexistente() {
+        System.out.println("Pegar um lote que não existe");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.getLote(show1ID, lote1ID);
+                });    }
 
     @Test
     void getLotes() {
@@ -239,6 +260,15 @@ class TicketmanTest {
     }
 
     @Test
+    void getLotesInexistente() {
+        System.out.println("Pegar lotes de um show sem Lotes");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        String loteToString = "Show não possui lotes.";
+        assertEquals(ticketman.getLotesString("22012024Chappell Roan"), loteToString);
+    }
+
+    @Test
     void comprarLote() {
         System.out.println("Comprar um Lote");
         Ticketman ticketman = new Ticketman();
@@ -248,6 +278,17 @@ class TicketmanTest {
         lote1.comprarLote();
         ticketman.comprarLote(show1ID, lote1ID);
         assertEquals(lote1.isStatus(), ticketman.getLoteStatus(show1ID, lote1ID));
+    }
+
+    @Test
+    void comprarLoteInexistente() {
+        System.out.println("Comprar um Lote que não existe");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    ticketman.comprarLote(show1ID, lote1ID);
+                });
     }
 
     /*
@@ -263,19 +304,37 @@ class TicketmanTest {
 
 
     @Test
-    void gerarRelatorio() {
+    void gerarRelatorio1() {
         System.out.println("Gerar o relatório de um Show");
         Ticketman ticketman = new Ticketman();
         ticketman.criarShow(dataShow1, art1, cache1, despesas1, false);
         ticketman.criarLote(show1ID, 30, 10, 60, 0, 20);
         ticketman.criarLote("22012024Chappell Roan", 25, 10, 65, 0, 10);
         ticketman.comprarLote(show1ID, lote1ID);
-        String relatorio = "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
+        String relatorio = "Show de Chappell Roan - 22/1/2024\n" +
+                "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
                 "60 Ingressos NORMAIS vendidos. \n" +
                 "Receita Líquida: 50000; Status Financeiro: LUCRO";
         System.out.println(relatorio);
         System.out.println(ticketman.gerarRelatorio(show1ID));
         assertEquals(relatorio, ticketman.gerarRelatorio(show1ID));
+    }
+
+    @Test
+    void gerarRelatorio2() {
+        System.out.println("Gerar o relatório de um Show");
+        Ticketman ticketman = new Ticketman();
+        ticketman.criarShow(dataShow2, art2, cache2, despesas2, true);
+        ticketman.criarLote(show2ID, 30, 10, 60, 5, 20);
+        ticketman.comprarLote(show2ID, lote2ID);
+        int receitaBruta = 237500;
+        String relatorio = "Show de WILLOW - 25/12/2024\n" +
+                "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
+                "60 Ingressos NORMAIS vendidos. \n" +
+                "Receita Líquida: -192500; Status Financeiro: PREJUÍZO";
+        System.out.println(relatorio);
+        System.out.println(ticketman.gerarRelatorio(show2ID));
+        assertEquals(relatorio, ticketman.gerarRelatorio(show2ID));
     }
 
 

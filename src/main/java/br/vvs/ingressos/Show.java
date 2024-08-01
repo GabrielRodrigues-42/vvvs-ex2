@@ -14,16 +14,15 @@ public class Show {
     private int vendidosVIP;
     private int vendidosMEIA;
     private int vendidosNORMAIS;
+    private int vendidosTOTAL;
     private int receita;
     private String statusFinanceiro;
 
     public Show(Calendar data, String artista, int cache, int despesas, boolean especial) {
         this.data = data;
         this.artista = artista;
-        this.cache = cache*100; //valor multiplicado por 100 para eliminar centavos
-        this.despesas = despesas*100; //valor multiplicado por 100 para eliminar centavos
         this.especial = especial;
-        this.receita = 0 - this.cache - this.despesas;
+        gerarReceita(cache, despesas);
         String day = String.format("%02d", data.get(Calendar.DAY_OF_MONTH));
         String month = String.format("%02d", data.get(Calendar.MONTH) + 1);
         String year = String.format("%04d", data.get(Calendar.YEAR));
@@ -32,11 +31,26 @@ public class Show {
         this.vendidosVIP = 0;
         this.vendidosMEIA = 0;
         this.vendidosNORMAIS = 0;
+        this.vendidosTOTAL = 0;
+
         //System.out.println(id);
 
 
     }
 
+    //Inicializa e gera o cachê, as despesas e a receita, incrementando as despesas em 15% caso seja uma data especial
+    private void gerarReceita(int cache, int despesas) {
+        this.cache = cache*100; // Valores multiplicados por 100 para eliminar centavos;
+        if(this.especial) {
+            this.despesas = despesas*115;
+        }
+        else {
+            this.despesas = despesas*100;
+        }
+        this.receita = 0 - (this.cache + this.despesas);
+    }
+
+    //Cria um Lote, o Lote ID no formato 01012000NomeDoArtista-Index e o adiciona a lista de Lotes.
     public Lote criarLote(int vip, int meia, int normal, int desconto, int precoIngresso) {
         String loteID = this.id + "-" + lotes.size();
         Lote lote = new Lote(loteID, vip, meia, normal, desconto, precoIngresso);
@@ -44,6 +58,7 @@ public class Show {
         return lote;
     }
 
+    //Compara dois Shows e retorna se eles tiverem a mesma ID.
     public boolean equals(Show show) {
         if(show.getData().equals(this.data) && show.getArtista().equals(this.artista)
                 && show.getCache() == this.cache && show.getDespesas() == this.despesas
@@ -81,6 +96,8 @@ public class Show {
     public List<Lote> getLotes() {
         return lotes;
     }
+
+    //Retorna um Lote específico com base no seu ID.
     public Lote getLote(String loteID) {
         for(int i = 0; i < lotes.size(); i++) {
             if(lotes.get(i).getID().equals(loteID)) {
@@ -94,24 +111,36 @@ public class Show {
         return artista + id;
     }
 
+    //Gera o Relatório com o nome do Artista, a data do Show, o número de ingressos vendidos,
+    //a Receita Líquida (Vendas - (Cachê + Despesas) e se ele saiu no lucro ou no prejuízo.
     public String gerarRelatorio() {
         checkStatusFinanceiro();
-        String relatorio = this.vendidosVIP + " Ingressos VIP vendidos, " + this.vendidosMEIA +
-                " Ingressos MEIA vendidos, " + this.vendidosNORMAIS +
-                " Ingressos NORMAIS vendidos. \n" +
-                "Receita Líquida: " + this.receita + "; Status Financeiro: " +
-                this.statusFinanceiro;
-        return relatorio;
+        int mes = this.data.get(Calendar.MONTH) + 1;
+        String dataFormatada = data.get(Calendar.DAY_OF_MONTH) + "/" + mes + "/" + data.get(Calendar.YEAR);
+
+        StringBuilder relatorio = new StringBuilder();
+        relatorio.append("Show de ").append(artista).append(" - ").append(dataFormatada)
+                .append("\n").append(this.vendidosVIP).append(" Ingressos VIP vendidos, ")
+                .append(this.vendidosMEIA).append(" Ingressos MEIA vendidos, ")
+                .append(this.vendidosNORMAIS).append(" Ingressos NORMAIS vendidos. \n")
+                .append("Receita Líquida: ").append(this.receita)
+                .append("; Status Financeiro: ").append(this.statusFinanceiro);
+
+        return relatorio.toString();
     }
 
+
+    //Compra um Lote e atualiza as vendas e receita.
     public void comprarLote(String loteID) {
         getLote(loteID).comprarLote();
         this.vendidosVIP += getLote(loteID).getNumeroVip();
         this.vendidosMEIA += getLote(loteID).getNumeroMeia();
         this.vendidosNORMAIS += getLote(loteID).getNumeroNormal();
         receita += getLote(loteID).getValorTotal();
+        this.vendidosTOTAL += getLote(loteID).getValorTotal();
     }
 
+    //Instancia o Status Financeiro para um de seus estados aceitáveis.
     public void checkStatusFinanceiro() {
         if(receita > 0) {
             this.statusFinanceiro = "LUCRO";
