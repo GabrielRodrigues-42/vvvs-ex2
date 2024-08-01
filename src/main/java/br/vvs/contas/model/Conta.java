@@ -19,7 +19,20 @@ public class Conta {
     }
 
     public void updatePagamento(Date data, TipoPagamentoEnum tipoPagamentoEnum) {
-        Pagamento pagamento = new Pagamento(this.valorPago, data, tipoPagamentoEnum);
+        if (tipoPagamentoEnum == TipoPagamentoEnum.BOLETO) {
+            updatePagamentoBoleto(data);
+        } else {
+            this.pagamento = new Pagamento(this.valorPago, data, tipoPagamentoEnum);
+        }
+    }
+
+    private void updatePagamentoBoleto(Date data) {
+        Pagamento pagamento;
+        if (data.after(this.data)) {
+            pagamento = new Pagamento(this.valorPago * 1.1, data, TipoPagamentoEnum.BOLETO);
+        } else {
+            pagamento = new Pagamento(this.valorPago, data, TipoPagamentoEnum.BOLETO);
+        }
         this.pagamento = pagamento;
     }
 }

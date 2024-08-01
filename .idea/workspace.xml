@@ -14,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,13 +34,20 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.ContaServiceTest.criarContaService.executor": "Run",
+    "JUnit.ContaServiceTest.executor": "Run",
+    "JUnit.ContaServiceTest.exemploI.executor": "Run",
+    "JUnit.ContaServiceTest.exemploII.executor": "Run",
+    "JUnit.ContaServiceTest.exemploIII.executor": "Run",
+    "JUnit.ContaServiceTest.pagarFaturaPorCartao.executor": "Run",
     "JUnit.ContaServiceTest.pagarFaturaPorTransferencia.executor": "Run",
     "JUnit.ContaTest.criarConta.executor": "Run",
     "JUnit.ContaTest.executor": "Run",
+    "JUnit.ContaTest.updatePagamentoBoletoAtrasadoConta.executor": "Run",
     "JUnit.ContaTest.updatePagamentoConta.executor": "Run",
     "JUnit.FaturaTest.criarFatura.executor": "Run",
     "JUnit.FaturaTest.executor": "Run",
     "JUnit.FaturaTest.updateFatura.executor": "Run",
+    "JUnit.FaturaTest.updateFaturaPagamentoCredito.executor": "Run",
     "JUnit.PagamentoTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -74,7 +81,7 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContaServiceTest">
+  <component name="RunManager" selected="JUnit.contas in vvvs-ex2">
     <configuration name="ContaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -85,12 +92,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
+      <option name="METHOD_NAME" value="exemploII" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContaServiceTest.pagarFaturaPorTransferencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContaServiceTest.TEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +108,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
-      <option name="METHOD_NAME" value="pagarFaturaPorTransferencia" />
+      <option name="METHOD_NAME" value="TEST" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContaTest.updatePagamentoConta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContaServiceTest.exemploIII" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +123,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaTest" />
-      <option name="METHOD_NAME" value="updatePagamentoConta" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
+      <option name="METHOD_NAME" value="exemploIII" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FaturaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContaServiceTest.pagarFaturaPorCartao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -131,35 +139,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.FaturaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
+      <option name="METHOD_NAME" value="pagarFaturaPorCartao" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FaturaTest.updateFatura" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="contas in vvvs-ex2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.contas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.FaturaTest" />
-      <option name="METHOD_NAME" value="updateFatura" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/br/vvs/contas" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.contas in vvvs-ex2" />
+        <item itemvalue="JUnit.ContaServiceTest.TEST" />
+        <item itemvalue="JUnit.ContaServiceTest.exemploIII" />
+        <item itemvalue="JUnit.ContaServiceTest.pagarFaturaPorCartao" />
         <item itemvalue="JUnit.ContaServiceTest" />
-        <item itemvalue="JUnit.ContaServiceTest.pagarFaturaPorTransferencia" />
-        <item itemvalue="JUnit.FaturaTest" />
-        <item itemvalue="JUnit.FaturaTest.updateFatura" />
-        <item itemvalue="JUnit.ContaTest.updatePagamentoConta" />
       </list>
     </recent_temporary>
   </component>
@@ -417,6 +418,22 @@
     <MESSAGE value="Teste para criar um Lote com números inválidos pelos parâmetros do cliente passando com sucesso." />
     <MESSAGE value="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
     <option name="LAST_COMMIT_MESSAGE" value="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/vvs/contas/model/Fatura.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/vvs/contas/ContaServiceTest.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vvvs_ex2$TicketmanTest_criarShow.ic" NAME="TicketmanTest.criarShow Coverage Results" MODIFIED="1722458300050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

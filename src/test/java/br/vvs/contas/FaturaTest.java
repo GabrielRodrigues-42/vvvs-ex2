@@ -65,5 +65,50 @@ public class FaturaTest {
         assertEquals(FaturaStatusEnum.PAGA, fatura.getStatus());
     }
 
+    @Test
+    void updateFaturaPagamentoCredito() {
+        Date data = new Date();
+        double valorTotal = 59.99;
+        String nomeCliente = "Gabriel";
+        Fatura fatura = new Fatura(data, valorTotal, nomeCliente);
+        conta.updatePagamento(new Date(data.getYear(), data.getMonth(), data.getDate() - 16), TipoPagamentoEnum.CARTAO_CREDITO);
+        conta.setData(new Date(data.getYear(), data.getMonth(), data.getDate() - 16));
+        ArrayList<Conta> contas = new ArrayList<>(Collections.singleton(conta));
+        fatura.setContas(contas);
+        fatura.update();
+
+        assertEquals(FaturaStatusEnum.PAGA, fatura.getStatus());
+    }
+
+    @Test
+    void updateFaturaPagamentoCreditoAtrasado() {
+        Date data = new Date();
+        double valorTotal = 59.99;
+        String nomeCliente = "Gabriel";
+        Fatura fatura = new Fatura(data, valorTotal, nomeCliente);
+        conta.updatePagamento(new Date(data.getYear(), data.getMonth(), data.getDate() - 14), TipoPagamentoEnum.CARTAO_CREDITO);
+        conta.setData(new Date(data.getYear(), data.getMonth(), data.getDate() - 14));
+        ArrayList<Conta> contas = new ArrayList<>(Collections.singleton(conta));
+        fatura.setContas(contas);
+        fatura.update();
+
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void updateFaturaPagamentoAtrasado() {
+        Date data = new Date();
+        double valorTotal = 59.99;
+        String nomeCliente = "Gabriel";
+        Fatura fatura = new Fatura(data, valorTotal, nomeCliente);
+        conta.updatePagamento(new Date(data.getYear(), data.getMonth(), data.getDate() + 1), TipoPagamentoEnum.CARTAO_CREDITO);
+        conta.setData(new Date(data.getYear(), data.getMonth(), data.getDate() + 1));
+        ArrayList<Conta> contas = new ArrayList<>(Collections.singleton(conta));
+        fatura.setContas(contas);
+        fatura.update();
+
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
 
 }

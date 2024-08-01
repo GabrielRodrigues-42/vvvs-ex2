@@ -61,4 +61,16 @@ public class ContaTest {
         assertEquals(data, conta.getPagamento().getData());
         assertEquals(TipoPagamentoEnum.BOLETO, conta.getPagamento().getTipoPagamento());
     }
+
+    @Test
+    void updatePagamentoBoletoAtrasadoConta() {
+        Date data = new Date();
+        Integer codigo = 1;
+        double valorPago = 50.00;
+        Conta conta = new Conta(codigo, data, valorPago);
+        conta.updatePagamento(new Date(data.getYear(), data.getMonth(), data.getDate() + 10), TipoPagamentoEnum.BOLETO);
+
+        assertEquals(conta.getValorPago() * 1.1, conta.getPagamento().getValorPago());
+        assertEquals(TipoPagamentoEnum.BOLETO, conta.getPagamento().getTipoPagamento());
+    }
 }
