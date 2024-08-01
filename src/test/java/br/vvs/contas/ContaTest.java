@@ -32,9 +32,10 @@ public class ContaTest {
         double valorPago = 50.00;
         Conta conta = new Conta(codigo, data, valorPago);
         assertNotNull(conta);
-        assertEquals(conta.getData().getTime(), data.getTime());
-        assertEquals(conta.getValorPago(), valorPago);
-        assertEquals(conta.getCodigo(), codigo);
+        assertEquals(data.getTime(), conta.getData().getTime());
+        assertEquals(valorPago, conta.getValorPago());
+        assertEquals(codigo, conta.getCodigo());
+        assertEquals(0, conta.getPagamento().getValorPago());
     }
 
     @Test
@@ -46,5 +47,18 @@ public class ContaTest {
         conta.setPagamento(pagamento);
 
         assertEquals(pagamento, conta.getPagamento());
+    }
+
+    @Test
+    void updatePagamentoConta() {
+        Date data = new Date();
+        Integer codigo = 1;
+        double valorPago = 50.00;
+        Conta conta = new Conta(codigo, data, valorPago);
+        conta.updatePagamento(data, TipoPagamentoEnum.BOLETO);
+
+        assertEquals(conta.getValorPago(), conta.getPagamento().getValorPago());
+        assertEquals(data, conta.getPagamento().getData());
+        assertEquals(TipoPagamentoEnum.BOLETO, conta.getPagamento().getTipoPagamento());
     }
 }

@@ -3,6 +3,7 @@ package br.vvs.contas;
 import br.vvs.contas.model.Conta;
 import br.vvs.contas.model.Fatura;
 import br.vvs.contas.model.FaturaStatusEnum;
+import br.vvs.contas.model.TipoPagamentoEnum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,8 +20,9 @@ public class FaturaTest {
     public void setup() {
         Date data = new Date();
         Integer codigo = 1;
-        double valorPago = 50.00;
+        double valorPago = 59.99;
         conta = new Conta(codigo, data, valorPago);
+
     }
 
     @Test
@@ -47,6 +49,20 @@ public class FaturaTest {
 
         assertEquals(1, fatura.getContas().size());
         assertEquals(conta, fatura.getContas().get(0));
+    }
+
+    @Test
+    void updateFatura() {
+        Date data = new Date();
+        double valorTotal = 59.99;
+        String nomeCliente = "Gabriel";
+        Fatura fatura = new Fatura(data, valorTotal, nomeCliente);
+        conta.updatePagamento(data, TipoPagamentoEnum.BOLETO);
+        ArrayList<Conta> contas = new ArrayList<>(Collections.singleton(conta));
+        fatura.setContas(contas);
+        fatura.update();
+
+        assertEquals(FaturaStatusEnum.PAGA, fatura.getStatus());
     }
 
 

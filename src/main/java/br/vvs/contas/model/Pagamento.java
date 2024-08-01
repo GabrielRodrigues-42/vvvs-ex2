@@ -21,5 +21,9 @@ public class Pagamento {
         }
     }
 
+    public Pagamento() {
+        valorPago = 0;
+    }
+
 
 }

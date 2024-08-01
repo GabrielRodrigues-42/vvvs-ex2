@@ -15,5 +15,11 @@ public class Conta {
         this.codigo = codigo;
         this.data = data;
         this.valorPago = valorPago;
+        this.pagamento = new Pagamento();
+    }
+
+    public void updatePagamento(Date data, TipoPagamentoEnum tipoPagamentoEnum) {
+        Pagamento pagamento = new Pagamento(this.valorPago, data, tipoPagamentoEnum);
+        this.pagamento = pagamento;
     }
 }

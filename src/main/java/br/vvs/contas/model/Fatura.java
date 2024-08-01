@@ -19,4 +19,16 @@ public class Fatura {
         this.nomeCliente = nomeCliente;
         this.status = FaturaStatusEnum.PENDENTE;
     }
+
+    public void update() {
+        double valorPago = 0;
+        for (Conta c : contas) {
+            valorPago += c.getPagamento().getValorPago();
+        }
+        if (valorPago >= this.valorTotal) {
+            setStatus(FaturaStatusEnum.PAGA);
+        } else {
+            setStatus(FaturaStatusEnum.PENDENTE);
+        }
+    }
 }
