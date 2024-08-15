@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="Teste para criar um Lote com valores nulos ou em Show Inexistente passando corretamente de primeira." />
+    <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +82,7 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.vvs in vvvs-ex2">
+  <component name="RunManager" selected="JUnit.TicketmanTableTests">
     <configuration name="ContaServiceTest.TEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -115,18 +115,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContaServiceTest.pagarFaturaPorCartao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TicketmanTableTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.vvs.contas.*" />
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
-      <option name="METHOD_NAME" value="pagarFaturaPorCartao" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTableTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicketmanTableTests" />
         <item itemvalue="JUnit.vvs in vvvs-ex2" />
         <item itemvalue="JUnit.contas in vvvs-ex2" />
         <item itemvalue="JUnit.ContaServiceTest.TEST" />
         <item itemvalue="JUnit.ContaServiceTest.exemploIII" />
-        <item itemvalue="JUnit.ContaServiceTest.pagarFaturaPorCartao" />
       </list>
     </recent_temporary>
   </component>
