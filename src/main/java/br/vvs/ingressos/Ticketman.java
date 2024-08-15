@@ -8,20 +8,37 @@ public class Ticketman {
 
     public int numeroDeShows;
     private List<Show> shows;
+    private final Integer MAX_LIMIT = (Integer.MAX_VALUE)/2;
 
     public Ticketman() {
         shows = new ArrayList<>();
         numeroDeShows = 0;
     }
 
-    //Cria o Show, adiciona para a lista de Shows e Incrementa o NúmeroDeShows.
+    //Cria o Show, adiciona para a lista de Shows e Incrementa o númeroDeShows.
     public Show criarShow(Calendar dataShow, String art, int cache, int despesas, boolean especial) {
         verificarShowNulo(dataShow, art, cache, despesas, especial);
         verificarShowVazio(dataShow, art, cache, despesas);
+        verificarShowValido(cache, despesas, dataShow);
         Show show = new Show(dataShow, art, cache, despesas, especial);
         shows.add(show);
         numeroDeShows++;
         return show;
+    }
+
+    private void verificarShowValido(int cache, int despesas, Calendar dataShow) {
+        if (cache > MAX_LIMIT) {
+            throw new IllegalArgumentException("O cachê não pode ser tão alto.");
+        }
+        if (despesas > MAX_LIMIT) {
+            throw new IllegalArgumentException("As despesas não podem ser tão altas.");
+        }
+        if (cache < 0) {
+            throw new IllegalArgumentException("O cachê não pode ser negativo.");
+        }
+        if (despesas < 0) {
+            throw new IllegalArgumentException("As despesas não podem ser negativas.");
+        }
     }
 
     //Verifica se as entradas para o Show não estão vazias.
@@ -76,7 +93,7 @@ public class Ticketman {
         if (desconto < 0) {
             throw new IllegalArgumentException("O desconto deve ser um valor positivo.");
         }
-        if (precoIngresso <= 0) {
+        if (precoIngresso < 0) {
             throw new IllegalArgumentException("O Preço do Ingresso deve ser um valor positivo.");
         }
     }

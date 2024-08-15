@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="">
+    <list default="true" id="d6ae339f-f0fd-4c6b-92e4-181cff4d78a5" name="Changes" comment="Adicionar comentários.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanFunctionalAVLTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanPartitionTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTableTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Lote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Lote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Ticketman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/ingressos/Ticketman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/ingressos/TicketmanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Show.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Ticketman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Ticketman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,9 +79,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="br.vvs.gabrielEx2" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.vvs.ingressos" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketmanTest.criarShowEmDiaInválido">
-    <configuration name="TicketmanTest.comprarLoteInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TicketmanTableTests.showLUCRO">
+    <configuration name="TicketmanFunctionalAVLTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -83,14 +93,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
-      <option name="METHOD_NAME" value="comprarLoteInexistente" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanFunctionalAVLTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketmanPartitionTests.showDesconto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.ingressos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanPartitionTests" />
+      <option name="METHOD_NAME" value="showDesconto" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketmanTest.criarShowEmDiaInválido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TicketmanTableTests.showLUCRO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -99,14 +124,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
-      <option name="METHOD_NAME" value="criarShowEmDiaInválido" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTableTests" />
+      <option name="METHOD_NAME" value="showLUCRO" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketmanTest.gerarRelatorio1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TicketmanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -116,8 +141,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
-      <option name="METHOD_NAME" value="gerarRelatorio1" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,29 +162,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TicketmanTest.getLoteInexistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.ingressos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTest" />
-      <option name="METHOD_NAME" value="getLoteInexistente" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TicketmanTest.criarShowEmDiaInválido" />
-        <item itemvalue="JUnit.TicketmanTest.gerarRelatorio1" />
+        <item itemvalue="JUnit.TicketmanTableTests.showLUCRO" />
         <item itemvalue="JUnit.TicketmanTest.gerarRelatorio2" />
-        <item itemvalue="JUnit.TicketmanTest.comprarLoteInexistente" />
-        <item itemvalue="JUnit.TicketmanTest.getLoteInexistente" />
+        <item itemvalue="JUnit.TicketmanTest" />
+        <item itemvalue="JUnit.TicketmanFunctionalAVLTests" />
+        <item itemvalue="JUnit.TicketmanPartitionTests.showDesconto" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +182,10 @@
       <updated>1722356774538</updated>
       <workItem from="1722356775660" duration="29507000" />
       <workItem from="1722457969670" duration="4749000" />
-      <workItem from="1722474267249" duration="826000" />
+      <workItem from="1722474267249" duration="1904000" />
+      <workItem from="1723597378019" duration="4607000" />
+      <workItem from="1723672179723" duration="5540000" />
+      <workItem from="1723680172707" duration="1768000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1722369127416</created>
@@ -442,14 +453,20 @@
       <option name="project" value="LOCAL" />
       <updated>1722469642479</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Adicionar comentários.">
+      <created>1722475208274</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1722475208274</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Teste Alterado para Comprar Ingresso Correto." />
     <MESSAGE value="Teste para Comprar um Lote, esqueci de fazer na ordem certa." />
     <MESSAGE value="Teste para Gerar Relatório. Irá falhar feio." />
     <MESSAGE value="Alterações em comprarLote e comprarIngresso para facilitar criação de relatório." />
@@ -474,7 +491,8 @@
     <MESSAGE value="Teste para gerar um Relatório em um dia especial." />
     <MESSAGE value="Teste para gerar um Relatório em um dia especial passando com sucesso, mudando formato do relatório para incluir o Show." />
     <MESSAGE value="Teste para criar um Show em um dia que não existe." />
-    <option name="LAST_COMMIT_MESSAGE" value="Teste para criar um Show em um dia que não existe." />
+    <MESSAGE value="Adicionar comentários." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionar comentários." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vvvs_ex2$TicketmanTest_criarShow.ic" NAME="TicketmanTest.criarShow Coverage Results" MODIFIED="1722458300050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

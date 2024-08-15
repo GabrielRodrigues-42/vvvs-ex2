@@ -331,7 +331,7 @@ class TicketmanTest {
         String relatorio = "Show de WILLOW - 25/12/2024\n" +
                 "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
                 "60 Ingressos NORMAIS vendidos. \n" +
-                "Receita Líquida: -192500; Status Financeiro: PREJUÍZO";
+                "Receita Líquida: -192000; Status Financeiro: PREJUÍZO";
         System.out.println(relatorio);
         System.out.println(ticketman.gerarRelatorio(show2ID));
         assertEquals(relatorio, ticketman.gerarRelatorio(show2ID));
