@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/contas/model/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/contas/model/Pagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/contas/PagamentoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/contas/PagamentoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/contas/ContaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/contas/ContaServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,22 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PagamentoTest">
+  <component name="RunManager" selected="JUnit.ContaServiceTest">
+    <configuration name="ContaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.contas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.contas" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PagamentoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -156,21 +163,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="vvs in vvvs-ex2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/br/vvs" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ContaServiceTest" />
         <item itemvalue="JUnit.PagamentoTest" />
         <item itemvalue="JUnit.contas in vvvs-ex2" />
         <item itemvalue="JUnit.PagamentoTest.criarPagamentoBoletoComValorInvalido" />
         <item itemvalue="JUnit.TicketmanTableTests" />
-        <item itemvalue="JUnit.vvs in vvvs-ex2" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +183,7 @@
       <updated>1722356774538</updated>
       <workItem from="1722356775660" duration="29507000" />
       <workItem from="1722457969670" duration="4749000" />
-      <workItem from="1724097686119" duration="1522000" />
+      <workItem from="1724097686119" duration="2366000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1722369127416</created>
@@ -440,7 +439,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/br/vvs/contas/ContaServiceTest.java</url>
-          <line>113</line>
+          <line>114</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
