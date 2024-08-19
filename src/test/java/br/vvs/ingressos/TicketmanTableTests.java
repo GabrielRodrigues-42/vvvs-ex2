@@ -147,7 +147,7 @@ class TicketmanTableTests {
         String relatorio = "Show de Chappell Roan - 22/1/2024\n" +
                 "30 Ingressos VIP vendidos, 10 Ingressos MEIA vendidos, " +
                 "60 Ingressos NORMAIS vendidos. \n" +
-                "Receita Líquida: 35000; Status Financeiro: LUCRO";
+                "Receita Líquida: 385000; Status Financeiro: LUCRO";
         System.out.println(relatorio);
         System.out.println(ticketman.gerarRelatorio(show1ID));
         assertEquals(relatorio, ticketman.gerarRelatorio(show1ID));
