@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/contas/ContaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/contas/ContaServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,7 @@
     "JUnit.ContaServiceTest.exemploIII.executor": "Run",
     "JUnit.ContaServiceTest.pagarFaturaPorCartao.executor": "Run",
     "JUnit.ContaServiceTest.pagarFaturaPorTransferencia.executor": "Run",
+    "JUnit.ContaServiceTest.regraI.executor": "Run",
     "JUnit.ContaTest.criarConta.executor": "Run",
     "JUnit.ContaTest.executor": "Run",
     "JUnit.ContaTest.updatePagamentoBoletoAtrasadoConta.executor": "Run",
@@ -92,7 +94,7 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContaServiceTest">
+  <component name="RunManager" selected="JUnit.ingressos in vvvs-ex2">
     <configuration name="ContaServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
@@ -104,6 +106,22 @@
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
       <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContaServiceTest.regraI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.vvs.contas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.vvs.contas" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
+      <option name="METHOD_NAME" value="regraI" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,37 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PagamentoTest.criarPagamentoBoletoComValorInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.contas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.PagamentoTest" />
-      <option name="METHOD_NAME" value="criarPagamentoBoletoComValorInvalido" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicketmanTableTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vvvs-ex2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.vvs.ingressos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.vvs.ingressos" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.ingressos.TicketmanTableTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="contas in vvvs-ex2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <option name="TEST_OBJECT" value="directory" />
@@ -163,13 +150,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ingressos in vvvs-ex2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vvvs-ex2" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/br/vvs/ingressos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ContaServiceTest" />
-        <item itemvalue="JUnit.PagamentoTest" />
+        <item itemvalue="JUnit.ingressos in vvvs-ex2" />
         <item itemvalue="JUnit.contas in vvvs-ex2" />
-        <item itemvalue="JUnit.PagamentoTest.criarPagamentoBoletoComValorInvalido" />
-        <item itemvalue="JUnit.TicketmanTableTests" />
+        <item itemvalue="JUnit.ContaServiceTest" />
+        <item itemvalue="JUnit.ContaServiceTest.regraI" />
+        <item itemvalue="JUnit.PagamentoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +178,7 @@
       <updated>1722356774538</updated>
       <workItem from="1722356775660" duration="29507000" />
       <workItem from="1722457969670" duration="4749000" />
-      <workItem from="1724097686119" duration="2366000" />
+      <workItem from="1724097686119" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1722369127416</created>

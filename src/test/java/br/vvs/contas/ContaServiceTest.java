@@ -21,14 +21,14 @@ public class ContaServiceTest {
 
     @BeforeEach
     public void setup() {
-        Date data = new Date();
+        Date date = new Date();
         Integer codigo = 1;
         double valorPago = 59.99;
-        conta = new Conta(codigo, data, valorPago);
+        conta = new Conta(codigo, date, valorPago);
 
         double valorTotal = 59.99;
         String nomeCliente = "Gabriel";
-        fatura = new Fatura(data, valorTotal, nomeCliente);
+        fatura = new Fatura(date, valorTotal, nomeCliente);
         ArrayList<Conta> contas = new ArrayList<>(Collections.singleton(conta));
         fatura.setContas(contas);
 
@@ -43,8 +43,8 @@ public class ContaServiceTest {
     @Test
     void pagarFaturaPorCartao() {
         ContaService service = new ContaService();
-        Date dataLimite = new Date(conta.getData().getYear(), conta.getData().getMonth(), conta.getData().getDate() - 15);
-        service.pagarFatura(fatura, conta.getCodigo(), dataLimite, TipoPagamentoEnum.CARTAO_CREDITO);
+        Date dateLimite = new Date(conta.getData().getYear(), conta.getData().getMonth(), conta.getData().getDate() - 15);
+        service.pagarFatura(fatura, conta.getCodigo(), dateLimite, TipoPagamentoEnum.CARTAO_CREDITO);
 
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PAGA);
     }
@@ -72,22 +72,22 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 500);
-        Conta contaII = new Conta(2, data, 400);
-        Conta contaIII = new Conta(3, data, 600);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 400);
+        Conta contaIII = new Conta(3, date, 600);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), data, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
 
-        service.pagarFatura(fatura, contaII.getCodigo(), data, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), date, TipoPagamentoEnum.BOLETO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
 
-        service.pagarFatura(fatura, contaIII.getCodigo(), data, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), date, TipoPagamentoEnum.BOLETO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PAGA);
 
     }
@@ -97,22 +97,22 @@ public class ContaServiceTest {
         ContaService service = new ContaService();
         Calendar calendar = Calendar.getInstance();
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
         calendar.set(2023, 1, 5, 0, 0, 0);
-        Date dataI = calendar.getTime();
+        Date dateI = calendar.getTime();
         calendar.set(2023, 1, 17, 0, 0, 0);
-        Date dataII = calendar.getTime();
+        Date dateII = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestII");
-        Conta contaI = new Conta(1, data, 700);
-        Conta contaII = new Conta(2, data, 800);
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 700);
+        Conta contaII = new Conta(2, date, 800);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), dataI, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaI.getCodigo(), dateI, TipoPagamentoEnum.CARTAO_CREDITO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
 
-        service.pagarFatura(fatura, contaII.getCodigo(), dataII, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        service.pagarFatura(fatura, contaII.getCodigo(), dateII, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PAGA);
 
     }
@@ -122,22 +122,22 @@ public class ContaServiceTest {
         ContaService service = new ContaService();
         Calendar calendar = Calendar.getInstance();
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
         calendar.set(2023, 1, 6, 0, 0, 0);
-        Date dataI = calendar.getTime();
+        Date dateI = calendar.getTime();
         calendar.set(2023, 1, 17, 0, 0, 0);
-        Date dataII = calendar.getTime();
+        Date dateII = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestII");
-        Conta contaI = new Conta(1, data, 700);
-        Conta contaII = new Conta(2, data, 800);
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 700);
+        Conta contaII = new Conta(2, date, 800);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), dataI, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaI.getCodigo(), dateI, TipoPagamentoEnum.CARTAO_CREDITO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
 
-        service.pagarFatura(fatura, contaII.getCodigo(), dataII, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        service.pagarFatura(fatura, contaII.getCodigo(), dateII, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
 
     }
@@ -149,16 +149,16 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
         calendar.set(2023, 1, 5, 0, 0, 0);
-        Date dataI = calendar.getTime();
+        Date dateI = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 1500);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 1500);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), dataI, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaI.getCodigo(), dateI, TipoPagamentoEnum.CARTAO_CREDITO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PAGA);
 
     }
@@ -170,14 +170,14 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 1500);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 1500);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), data, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PAGA);
     }
 
@@ -188,14 +188,14 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 1500);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 1500);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), data, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PAGA);
     }
 
@@ -206,16 +206,16 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
         calendar.set(2023, 1, 5, 0, 0, 0);
-        Date dataI = calendar.getTime();
+        Date dateI = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 500);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 500);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), dataI, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaI.getCodigo(), dateI, TipoPagamentoEnum.CARTAO_CREDITO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
 
     }
@@ -227,14 +227,14 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 500);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 500);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), data, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
     }
 
@@ -245,15 +245,207 @@ public class ContaServiceTest {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(2023, 1, 20, 0, 0, 0);
-        Date data = calendar.getTime();
+        Date date = calendar.getTime();
 
-        fatura = new Fatura(data, 1500 ,"TestI");
-        Conta contaI = new Conta(1, data, 500);
+        fatura = new Fatura(date, 1500 ,"TestI");
+        Conta contaI = new Conta(1, date, 500);
         ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI}));
         fatura.setContas(contas);
 
-        service.pagarFatura(fatura, contaI.getCodigo(), data, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
         assertEquals(fatura.getStatus(), FaturaStatusEnum.PENDENTE);
+    }
+
+    @Test
+    void regra1() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), creditLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), date, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PAGA, fatura.getStatus());
+    }
+
+    @Test
+    void regra2() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), creditLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void regra3() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), date, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void regra4() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), date, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void regra5() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), creditLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), date, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void regra6() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), creditLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void regra7() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), date, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
+    }
+
+    @Test
+    void regra8() {
+        ContaService service = new ContaService();
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2023, 1, 20, 0, 0, 0);
+        Date date = calendar.getTime();
+        calendar.set(2023, 1, 5, 0, 0, 0);
+        Date creditLimit = calendar.getTime();
+        calendar.set(2023, 1, 21, 0, 0, 0);
+        Date defaultAboveLimit = calendar.getTime();
+
+        fatura = new Fatura(date, 1500 ,"TestII");
+        Conta contaI = new Conta(1, date, 500);
+        Conta contaII = new Conta(2, date, 500);
+        Conta contaIII = new Conta(3, date, 500);
+        ArrayList<Conta> contas = new ArrayList<>(List.of(new Conta[]{contaI, contaII, contaIII}));
+        fatura.setContas(contas);
+
+        service.pagarFatura(fatura, contaI.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.BOLETO);
+        service.pagarFatura(fatura, contaII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.CARTAO_CREDITO);
+        service.pagarFatura(fatura, contaIII.getCodigo(), defaultAboveLimit, TipoPagamentoEnum.TRANSFERENCIA_BANCARIA);
+        assertEquals(FaturaStatusEnum.PENDENTE, fatura.getStatus());
     }
 
 
