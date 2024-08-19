@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="" />
+    <list default="true" id="ac260597-63fd-442a-a02a-daf471642f95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/vvs/contas/model/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/vvs/contas/model/Pagamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/vvs/contas/PagamentoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/vvs/contas/PagamentoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/vvs/ingressos/Lote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/vvs/ingressos/TicketmanTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,52 +35,60 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2jyQK2zqWl8JPDpIVKlNuLBXlE4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.ContaServiceTest.criarContaService.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaServiceTest.exemploI.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaServiceTest.exemploII.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaServiceTest.exemploIII.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaServiceTest.pagarFaturaPorCartao.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaServiceTest.pagarFaturaPorTransferencia.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaTest.criarConta.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaTest.updatePagamentoBoletoAtrasadoConta.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContaTest.updatePagamentoConta.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FaturaTest.criarFatura.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FaturaTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FaturaTest.updateFatura.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FaturaTest.updateFaturaPagamentoCredito.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PagamentoTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pingu/OneDrive/Documentos/GitHub/vvvs-ex2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ContaServiceTest.criarContaService.executor": "Run",
+    "JUnit.ContaServiceTest.executor": "Run",
+    "JUnit.ContaServiceTest.exemploI.executor": "Run",
+    "JUnit.ContaServiceTest.exemploII.executor": "Run",
+    "JUnit.ContaServiceTest.exemploIII.executor": "Run",
+    "JUnit.ContaServiceTest.pagarFaturaPorCartao.executor": "Run",
+    "JUnit.ContaServiceTest.pagarFaturaPorTransferencia.executor": "Run",
+    "JUnit.ContaTest.criarConta.executor": "Run",
+    "JUnit.ContaTest.executor": "Run",
+    "JUnit.ContaTest.updatePagamentoBoletoAtrasadoConta.executor": "Run",
+    "JUnit.ContaTest.updatePagamentoConta.executor": "Run",
+    "JUnit.FaturaTest.criarFatura.executor": "Run",
+    "JUnit.FaturaTest.executor": "Run",
+    "JUnit.FaturaTest.updateFatura.executor": "Run",
+    "JUnit.FaturaTest.updateFaturaPagamentoCredito.executor": "Run",
+    "JUnit.PagamentoTest.criarPagamentoBoletoComValorInvalido.executor": "Run",
+    "JUnit.PagamentoTest.executor": "Run",
+    "JUnit.contas in vvvs-ex2.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pingu/OneDrive/Documentos/GitHub/vvvs-ex2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.vvs.gabrielEx2" />
@@ -82,8 +100,8 @@
       <recent name="br.vvs.gabrielEx2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketmanTableTests">
-    <configuration name="ContaServiceTest.TEST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PagamentoTest">
+    <configuration name="PagamentoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -92,14 +110,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
-      <option name="METHOD_NAME" value="TEST" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.PagamentoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <dir value="$PROJECT_DIR$/src/test/java/br/vvs/contas" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContaServiceTest.exemploIII" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PagamentoTest.criarPagamentoBoletoComValorInvalido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vvvs-ex2" />
       <extension name="coverage">
         <pattern>
@@ -108,8 +126,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="br.vvs.contas" />
-      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.ContaServiceTest" />
-      <option name="METHOD_NAME" value="exemploIII" />
+      <option name="MAIN_CLASS_NAME" value="br.vvs.contas.PagamentoTest" />
+      <option name="METHOD_NAME" value="criarPagamentoBoletoComValorInvalido" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PagamentoTest" />
+        <item itemvalue="JUnit.contas in vvvs-ex2" />
+        <item itemvalue="JUnit.PagamentoTest.criarPagamentoBoletoComValorInvalido" />
         <item itemvalue="JUnit.TicketmanTableTests" />
         <item itemvalue="JUnit.vvs in vvvs-ex2" />
-        <item itemvalue="JUnit.contas in vvvs-ex2" />
-        <item itemvalue="JUnit.ContaServiceTest.TEST" />
-        <item itemvalue="JUnit.ContaServiceTest.exemploIII" />
       </list>
     </recent_temporary>
   </component>
@@ -166,6 +184,7 @@
       <updated>1722356774538</updated>
       <workItem from="1722356775660" duration="29507000" />
       <workItem from="1722457969670" duration="4749000" />
+      <workItem from="1724097686119" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit">
       <created>1722369127416</created>
